@@ -3,7 +3,7 @@ from docx.shared import Pt, RGBColor, Inches, Cm
 import configparser
 import re
 import tkinter as tk
-
+#отправка 1 изменения в гит
 name = ""  # Глобальная переменная для хранения введенного значения
 
 def paste(event):
