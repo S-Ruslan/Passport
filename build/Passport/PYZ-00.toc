@@ -1,5 +1,5 @@
 ('C:\\Users\\Safin '
- 'Ruslan\\Desktop\\Passport\\pythonProject1\\build\\Passport\\PYZ-00.pyz',
+ 'Ruslan\\Desktop\\Программирование\\Passport\\pythonProject1\\build\\Passport\\PYZ-00.pyz',
  [('__future__',
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\__future__.py',
@@ -282,371 +282,371 @@
    'PYMODULE'),
   ('docx',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\__init__.py',
    'PYMODULE'),
   ('docx.api',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\api.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\api.py',
    'PYMODULE'),
   ('docx.blkcntnr',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\blkcntnr.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\blkcntnr.py',
    'PYMODULE'),
   ('docx.dml',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\dml\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\dml\\__init__.py',
    'PYMODULE'),
   ('docx.dml.color',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\dml\\color.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\dml\\color.py',
    'PYMODULE'),
   ('docx.document',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\document.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\document.py',
    'PYMODULE'),
   ('docx.drawing',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\drawing\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\drawing\\__init__.py',
    'PYMODULE'),
   ('docx.enum',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\enum\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\enum\\__init__.py',
    'PYMODULE'),
   ('docx.enum.base',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\enum\\base.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\enum\\base.py',
    'PYMODULE'),
   ('docx.enum.dml',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\enum\\dml.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\enum\\dml.py',
    'PYMODULE'),
   ('docx.enum.section',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\enum\\section.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\enum\\section.py',
    'PYMODULE'),
   ('docx.enum.shape',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\enum\\shape.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\enum\\shape.py',
    'PYMODULE'),
   ('docx.enum.style',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\enum\\style.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\enum\\style.py',
    'PYMODULE'),
   ('docx.enum.table',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\enum\\table.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\enum\\table.py',
    'PYMODULE'),
   ('docx.enum.text',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\enum\\text.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\enum\\text.py',
    'PYMODULE'),
   ('docx.exceptions',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\exceptions.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\exceptions.py',
    'PYMODULE'),
   ('docx.image',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\image\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\image\\__init__.py',
    'PYMODULE'),
   ('docx.image.bmp',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\image\\bmp.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\image\\bmp.py',
    'PYMODULE'),
   ('docx.image.constants',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\image\\constants.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\image\\constants.py',
    'PYMODULE'),
   ('docx.image.exceptions',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\image\\exceptions.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\image\\exceptions.py',
    'PYMODULE'),
   ('docx.image.gif',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\image\\gif.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\image\\gif.py',
    'PYMODULE'),
   ('docx.image.helpers',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\image\\helpers.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\image\\helpers.py',
    'PYMODULE'),
   ('docx.image.image',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\image\\image.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\image\\image.py',
    'PYMODULE'),
   ('docx.image.jpeg',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\image\\jpeg.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\image\\jpeg.py',
    'PYMODULE'),
   ('docx.image.png',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\image\\png.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\image\\png.py',
    'PYMODULE'),
   ('docx.image.tiff',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\image\\tiff.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\image\\tiff.py',
    'PYMODULE'),
   ('docx.opc',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\opc\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\opc\\__init__.py',
    'PYMODULE'),
   ('docx.opc.constants',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\opc\\constants.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\opc\\constants.py',
    'PYMODULE'),
   ('docx.opc.coreprops',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\opc\\coreprops.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\opc\\coreprops.py',
    'PYMODULE'),
   ('docx.opc.exceptions',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\opc\\exceptions.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\opc\\exceptions.py',
    'PYMODULE'),
   ('docx.opc.oxml',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\opc\\oxml.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\opc\\oxml.py',
    'PYMODULE'),
   ('docx.opc.package',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\opc\\package.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\opc\\package.py',
    'PYMODULE'),
   ('docx.opc.packuri',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\opc\\packuri.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\opc\\packuri.py',
    'PYMODULE'),
   ('docx.opc.part',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\opc\\part.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\opc\\part.py',
    'PYMODULE'),
   ('docx.opc.parts',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\opc\\parts\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\opc\\parts\\__init__.py',
    'PYMODULE'),
   ('docx.opc.parts.coreprops',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\opc\\parts\\coreprops.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\opc\\parts\\coreprops.py',
    'PYMODULE'),
   ('docx.opc.phys_pkg',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\opc\\phys_pkg.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\opc\\phys_pkg.py',
    'PYMODULE'),
   ('docx.opc.pkgreader',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\opc\\pkgreader.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\opc\\pkgreader.py',
    'PYMODULE'),
   ('docx.opc.pkgwriter',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\opc\\pkgwriter.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\opc\\pkgwriter.py',
    'PYMODULE'),
   ('docx.opc.rel',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\opc\\rel.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\opc\\rel.py',
    'PYMODULE'),
   ('docx.opc.shared',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\opc\\shared.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\opc\\shared.py',
    'PYMODULE'),
   ('docx.opc.spec',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\opc\\spec.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\opc\\spec.py',
    'PYMODULE'),
   ('docx.oxml',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\__init__.py',
    'PYMODULE'),
   ('docx.oxml.coreprops',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\coreprops.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\coreprops.py',
    'PYMODULE'),
   ('docx.oxml.document',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\document.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\document.py',
    'PYMODULE'),
   ('docx.oxml.drawing',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\drawing.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\drawing.py',
    'PYMODULE'),
   ('docx.oxml.exceptions',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\exceptions.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\exceptions.py',
    'PYMODULE'),
   ('docx.oxml.ns',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\ns.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\ns.py',
    'PYMODULE'),
   ('docx.oxml.numbering',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\numbering.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\numbering.py',
    'PYMODULE'),
   ('docx.oxml.parser',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\parser.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\parser.py',
    'PYMODULE'),
   ('docx.oxml.section',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\section.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\section.py',
    'PYMODULE'),
   ('docx.oxml.settings',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\settings.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\settings.py',
    'PYMODULE'),
   ('docx.oxml.shape',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\shape.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\shape.py',
    'PYMODULE'),
   ('docx.oxml.shared',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\shared.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\shared.py',
    'PYMODULE'),
   ('docx.oxml.simpletypes',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\simpletypes.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\simpletypes.py',
    'PYMODULE'),
   ('docx.oxml.styles',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\styles.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\styles.py',
    'PYMODULE'),
   ('docx.oxml.table',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\table.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\table.py',
    'PYMODULE'),
   ('docx.oxml.text',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\text\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\text\\__init__.py',
    'PYMODULE'),
   ('docx.oxml.text.font',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\text\\font.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\text\\font.py',
    'PYMODULE'),
   ('docx.oxml.text.hyperlink',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\text\\hyperlink.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\text\\hyperlink.py',
    'PYMODULE'),
   ('docx.oxml.text.pagebreak',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\text\\pagebreak.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\text\\pagebreak.py',
    'PYMODULE'),
   ('docx.oxml.text.paragraph',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\text\\paragraph.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\text\\paragraph.py',
    'PYMODULE'),
   ('docx.oxml.text.parfmt',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\text\\parfmt.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\text\\parfmt.py',
    'PYMODULE'),
   ('docx.oxml.text.run',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\text\\run.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\text\\run.py',
    'PYMODULE'),
   ('docx.oxml.xmlchemy',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\oxml\\xmlchemy.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\oxml\\xmlchemy.py',
    'PYMODULE'),
   ('docx.package',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\package.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\package.py',
    'PYMODULE'),
   ('docx.parts',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\parts\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\parts\\__init__.py',
    'PYMODULE'),
   ('docx.parts.document',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\parts\\document.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\parts\\document.py',
    'PYMODULE'),
   ('docx.parts.hdrftr',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\parts\\hdrftr.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\parts\\hdrftr.py',
    'PYMODULE'),
   ('docx.parts.image',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\parts\\image.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\parts\\image.py',
    'PYMODULE'),
   ('docx.parts.numbering',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\parts\\numbering.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\parts\\numbering.py',
    'PYMODULE'),
   ('docx.parts.settings',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\parts\\settings.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\parts\\settings.py',
    'PYMODULE'),
   ('docx.parts.story',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\parts\\story.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\parts\\story.py',
    'PYMODULE'),
   ('docx.parts.styles',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\parts\\styles.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\parts\\styles.py',
    'PYMODULE'),
   ('docx.section',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\section.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\section.py',
    'PYMODULE'),
   ('docx.settings',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\settings.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\settings.py',
    'PYMODULE'),
   ('docx.shape',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\shape.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\shape.py',
    'PYMODULE'),
   ('docx.shared',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\shared.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\shared.py',
    'PYMODULE'),
   ('docx.styles',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\styles\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\styles\\__init__.py',
    'PYMODULE'),
   ('docx.styles.latent',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\styles\\latent.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\styles\\latent.py',
    'PYMODULE'),
   ('docx.styles.style',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\styles\\style.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\styles\\style.py',
    'PYMODULE'),
   ('docx.styles.styles',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\styles\\styles.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\styles\\styles.py',
    'PYMODULE'),
   ('docx.table',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\table.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\table.py',
    'PYMODULE'),
   ('docx.text',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\text\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\text\\__init__.py',
    'PYMODULE'),
   ('docx.text.font',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\text\\font.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\text\\font.py',
    'PYMODULE'),
   ('docx.text.hyperlink',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\text\\hyperlink.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\text\\hyperlink.py',
    'PYMODULE'),
   ('docx.text.pagebreak',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\text\\pagebreak.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\text\\pagebreak.py',
    'PYMODULE'),
   ('docx.text.paragraph',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\text\\paragraph.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\text\\paragraph.py',
    'PYMODULE'),
   ('docx.text.parfmt',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\text\\parfmt.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\text\\parfmt.py',
    'PYMODULE'),
   ('docx.text.run',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\text\\run.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\text\\run.py',
    'PYMODULE'),
   ('docx.text.tabstops',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\text\\tabstops.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\text\\tabstops.py',
    'PYMODULE'),
   ('docx.types',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\docx\\types.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\docx\\types.py',
    'PYMODULE'),
   ('email',
    'C:\\Users\\Safin '
@@ -894,99 +894,99 @@
    'PYMODULE'),
   ('lxml',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\__init__.py',
    'PYMODULE'),
   ('lxml.ElementInclude',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\ElementInclude.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\ElementInclude.py',
    'PYMODULE'),
   ('lxml.cssselect',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\cssselect.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\cssselect.py',
    'PYMODULE'),
   ('lxml.doctestcompare',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\doctestcompare.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\doctestcompare.py',
    'PYMODULE'),
   ('lxml.html',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\html\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\html\\__init__.py',
    'PYMODULE'),
   ('lxml.html.ElementSoup',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\html\\ElementSoup.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\html\\ElementSoup.py',
    'PYMODULE'),
   ('lxml.html._diffcommand',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\html\\_diffcommand.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\html\\_diffcommand.py',
    'PYMODULE'),
   ('lxml.html._html5builder',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\html\\_html5builder.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\html\\_html5builder.py',
    'PYMODULE'),
   ('lxml.html._setmixin',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\html\\_setmixin.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\html\\_setmixin.py',
    'PYMODULE'),
   ('lxml.html.builder',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\html\\builder.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\html\\builder.py',
    'PYMODULE'),
   ('lxml.html.clean',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\html\\clean.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\html\\clean.py',
    'PYMODULE'),
   ('lxml.html.defs',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\html\\defs.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\html\\defs.py',
    'PYMODULE'),
   ('lxml.html.formfill',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\html\\formfill.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\html\\formfill.py',
    'PYMODULE'),
   ('lxml.html.html5parser',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\html\\html5parser.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\html\\html5parser.py',
    'PYMODULE'),
   ('lxml.html.soupparser',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\html\\soupparser.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\html\\soupparser.py',
    'PYMODULE'),
   ('lxml.html.usedoctest',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\html\\usedoctest.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\html\\usedoctest.py',
    'PYMODULE'),
   ('lxml.includes',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\includes\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\includes\\__init__.py',
    'PYMODULE'),
   ('lxml.includes.extlibs',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\includes\\extlibs\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\includes\\extlibs\\__init__.py',
    'PYMODULE'),
   ('lxml.includes.libexslt',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\includes\\libexslt\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\includes\\libexslt\\__init__.py',
    'PYMODULE'),
   ('lxml.includes.libxml',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\includes\\libxml\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\includes\\libxml\\__init__.py',
    'PYMODULE'),
   ('lxml.includes.libxslt',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\includes\\libxslt\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\includes\\libxslt\\__init__.py',
    'PYMODULE'),
   ('lxml.isoschematron',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\isoschematron\\__init__.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\isoschematron\\__init__.py',
    'PYMODULE'),
   ('lxml.pyclasslookup',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\pyclasslookup.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\pyclasslookup.py',
    'PYMODULE'),
   ('lxml.usedoctest',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\lxml\\usedoctest.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\lxml\\usedoctest.py',
    'PYMODULE'),
   ('lzma',
    'C:\\Users\\Safin '
@@ -1262,7 +1262,7 @@
    'PYMODULE'),
   ('typing_extensions',
    'C:\\Users\\Safin '
-   'Ruslan\\Desktop\\Passport\\pythonProject1\\.venv\\Lib\\site-packages\\typing_extensions.py',
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\typing_extensions.py',
    'PYMODULE'),
   ('unittest',
    'C:\\Users\\Safin '
