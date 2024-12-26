@@ -1,26 +1,48 @@
 from docx import Document
 from docx.shared import Pt, RGBColor
 from datetime import datetime
+from data_update import *
 import configparser
 import re
 import tkinter as tk
 
+# Общая логика работы программы
+# Создаем интерфейс с кнопками и полями, привязываем к кнопке функцию обработке полей и запуск основной программы
+# Определяется используемый шаблон паспорта (выбирался на начальном поле),
+# далее этот docx шаблон подцепляется программой и в нем будут происходить все изменения (размеченные поля заменяются
+# на характеристики продукции)
+# Далее введенный артикул с помощью регулярных выражений соотносится к серии продукции и на основе этой серии
+# загружается заранее созданный вручную конфигурационный фаил с основными характеристиками серии
+# Т.к. внутри серии характеристики могут отличаться разных артикулов, сделаны специальные функции обработчики и
+# выделены в отдельный фаил. Результат их работы - обновленный словарь, где ключами служат метки в docx и конфигураторе,
+# а значения - то что должно быть вписано вместо меток. Метки одинаковы в обоих фаилах
+# далее просто обновляем загруженный в начале docx шаблон и производим все замены внутри фаила по циклу
+# согласно обновленному словарю, есть функции форматирования текста
+
+# Известные уязвимости:
+# Отсутствуют какие-либо проверки на кривость введенных выражений, подразумевается, что артикулы будут 100% корректны
+# и взяты из CRM. Не писал, ибо нет задачи исправлять пользователей, актуально максимально расширить конфиг. фаилы
+
+# Известные баги:
+# В полях почему то не работает ctrl+v при русской раскладке клавиатуры. На англ. норм, решить проблему на
+# текущий момент не смог
+#
+
+# создание глобаных переменных для работы с полями интерфейса
 name = ""
 passport_number = ""
 executor = ""
 company = ""
+data = []
+num_lines = 0
 
-
-def contains_any_substring(long_string, substrings):
-    for substring in substrings:
-        if substring in long_string:
-            return True
-    return False
 
 def replace_text(run, old_text, new_text):
     if old_text in run.text:
         run.text = run.text.replace(old_text, new_text)
 
+
+# Форматирование текста в правый край (для правой части таблицы)
 def format_text_onright(paragraph):
     for run in paragraph.runs:
         if run.text != "":
@@ -29,6 +51,8 @@ def format_text_onright(paragraph):
             run.font.color.rgb = RGBColor(0, 0, 0)
             paragraph.alignment = 2
 
+
+# Форматирование текста в левый край (для левой части таблицы)
 def format_text_onleft(paragraph):
     for run in paragraph.runs:
         if run.text != "":
@@ -36,14 +60,18 @@ def format_text_onleft(paragraph):
             run.font.size = Pt(10)
             run.font.color.rgb = RGBColor(0, 0, 0)
             paragraph.alignment = 0
+
+
+# функция обработчик нажатия на кнопку
 def get_input():
+    # объявление глобальных переменных (для считывания с окна ввода)
     global name, passport_number, executor, selected_company
     name = entry_name.get()
     passport_number = entry_passport.get()
     executor = entry_executor.get()
-
-
+    # запуск основного кода программы
     run_main_code()
+
 
 def run_main_code():
     # Загружаем существующий шаблон .docx
@@ -59,7 +87,7 @@ def run_main_code():
         r'KQ.*XRT02': 'KQ_XRT02.txt'
     }
 
-    # Глобальная переменная для хранения имени конфигурации
+    # Переменная для хранения имени конфигурации
     config_name = ''
 
     # Проверка соответствия и установка имени конфигурации
@@ -70,14 +98,9 @@ def run_main_code():
     else:
         print(f"Текст '{name}' не соответствует ни одному из шаблонов.")
 
-    # Выводим установленное имя конфигурации
-    #print(f"Имя конфигурации: {config_name}")
-
     config = configparser.ConfigParser()
-
     # Указываем разделитель между ключами и значениями
-    config.optionxform = str  # Это важно, чтобы ключи оставались без изменений
-
+    config.optionxform = str
     # Читаем файл
     try:
         with open(config_name, encoding='utf-8') as file:
@@ -91,91 +114,24 @@ def run_main_code():
     except KeyError:
         print("Секция DEFAULT не найдена в файле конфигурации.")
 
-    #print(data)
-
-    # Вспомогательная функция для определения наличия выражения в строке. Например, я сопоставляю, есть ли 01, 02, 03 в строках 01, G01, 02S и т.д.
     num_lines = int(data['Number_lines'])
 
     if config_name == 'KQ_XLN01.txt':
-        pattern = r"([A-Z]+)(\d{2})-(.+)-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров
-        match = re.search(pattern, name)
-        if match:
-            # Извлекаем группы
-            first_part = str(match.group(1))  # Серия фитинга
-            first_digits = str(match.group(2))  # БРС
-            second_group = str(match.group(3))  # БРС/резьба
-            # Сейчас обработаем резьбовые фитинги
-            substrings = ['01', '02', '03', '04', 'M3', 'M5', 'M6']
-            have_rezba = contains_any_substring(second_group, substrings)
-            if first_part in ['KQH', 'KQS', 'KQF', 'KQL', 'KQW', 'KQK', 'KQV', 'KQT', 'KQY',
-                              'KQVF', 'KQU', 'KQLF'] and have_rezba:
-                num_lines += 1
-                if first_digits == '16':
-                    data['value2'] = str(0.8)
-                data['value4'] = str(first_digits).lstrip("0")
-                rezba = {
-                    '01': 'R1/8',
-                    '02': 'R1/4',
-                    '03': 'R3/8',
-                    '04': 'R1/2',
-                    '01S': 'R1/8',
-                    '02S': 'R1/4',
-                    '03S': 'R3/8',
-                    '04S': 'R1/2',
-                    'G01': 'G1/8',
-                    'G02': 'G1/4',
-                    'G03': 'G3/8',
-                    'G04': 'G1/2',
-                    'M3': 'M3',
-                    'M5': 'M5',
-                    'M6': 'M6',
-                }.get(second_group, '')
-                if first_part == 'KQLF':  # У KQLF обозначение резьб как R, а по факту G
-                    rezba = rezba.replace('R', 'G')
-                data['value5'] = rezba
-                #print('ДА')
+        # Здесь странный код, суть - нужно обновить словарь и кол-во строк для вывода
+        # словарь data обновляется нормально (Mutable объект), а счетчик строк (num_lines) обновляться не хочет
+        # теоретически, можно поиграть с объявлением global, но возникают конфликты. Поэтому сделал так:
+        # сама функция при работе обновляет словарь и возвращает в довесок обновленное кол-во строк
+        num_lines = data_update_kqxln01(name, data, num_lines)
 
-            # Условия для фитингов БРС
-            if second_group in ['99', '00']:
-                #print('ДА0')
-                if first_digits == '16':
-                    data['value2'] = str(0.8)
-                data['value4'] = str(first_digits).lstrip("0")
-
-            # Условия для фитингов БРС с разными выходами
-            if second_group in ['06', '08', '10', '12', '16', '14']:
-                #print('ДА1')
-                num_lines += 1
-                if first_digits == '16':
-                    data['value2'] = str(0.8)
-                data['value4'] = str(first_digits).lstrip("0")
-                data['line5'] = data['line4']
-                data['value5'] = str(second_group).lstrip("0")
-
-            # Условие для KQW03-M3-XLN01 и подобных
-            if '06-04' in name:
-                #print('ДА2')
-                # num_lines += 1 - здесь не увеличиваем кол-во строк, т.к. в 1 цикле зацепило по 04 и увеличило. Сейчас повторно обрабатываем
-                data['value4'] = str(first_digits).lstrip("0")
-                data['line5'] = data['line4']
-                data['value5'] = str(second_group).lstrip("0")
-        # Обработка KQP
-        pattern = r"KQP(\d{2})"  # Вытаскиваем куски до и после черты для определения размеров
-        match = re.search(pattern, name)
-        if match:
-            #print('ДА3')
-            # Извлекаем группы
-            first_digits = str(match.group(1))
-            data['value4'] = str(first_digits).lstrip("0")
-
-
+    # Ниже пошла обработка шаблона и замена полей
     for paragraph in document.paragraphs:
         if 'Declaration' in paragraph.text:
             for run in paragraph.runs:
                 if data['Declaration'] == "-":
                     replace_text(run, run.text, "")
                 else:
-                    dec_string = f"Продукция имеет\nДекларацию о соответствии\n{data['Declaration']}\nсроком с {data['DS']} по {data['DE']}"
+                    dec_string = (f"Продукция имеет\nДекларацию о соответствии\n{data['Declaration']}\n"
+                                  f"сроком с {data['DS']} по {data['DE']}")
                     replace_text(run, run.text, dec_string)
                     run.font.name = 'Arial Narrow'
                     run.font.size = Pt(12)
@@ -196,7 +152,6 @@ def run_main_code():
                 new_string = f"№{year}.{month}.{day}\\{executor}\\{passport_number} от {day}.{month}.{year}"
                 replace_text(run, run.text, new_string)
                 break
-
 
     for table in document.tables:
         for row in table.rows:
@@ -224,6 +179,9 @@ def run_main_code():
                                 format_text_onright(paragraph)
                                 break
 
+                        # удаление неиспользуемых ячеек(очистка от значений). В идеале в таблице просто удалять из нее
+                        # все лишние строки, но придумать как это сделать не удалось. Думал сформировать таблицу
+                        # силами программы и в нее вставлять, но как то все очень криво работало, сделал такой вариант
                         for i in range(num_lines + 1, 9):
                             line_key = f'line{i}'
                             value_key = f'value{i}'
@@ -237,6 +195,7 @@ def run_main_code():
     document.save(name + '.docx')
     output_text.delete('1.0', tk.END)  # Очищаем поле вывода перед новой записью
     output_text.insert(tk.END, 'Программа успешно отработала!\n')  # Сообщение об успехе
+
 
 # Создаем главное окно приложения
 root = tk.Tk()
@@ -277,6 +236,6 @@ output_text.pack(anchor='w')
 
 # Кнопка подтверждения
 button_confirm = tk.Button(root, text="Подтвердить", command=get_input)
-button_confirm.pack(pady=(10,0))
+button_confirm.pack(pady=(10, 0))
 
 root.mainloop()

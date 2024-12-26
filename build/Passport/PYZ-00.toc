@@ -256,6 +256,10 @@
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\ctypes\\_endian.py',
    'PYMODULE'),
+  ('data_update',
+   'C:\\Users\\Safin '
+   'Ruslan\\Desktop\\Программирование\\Passport\\pythonProject1\\data_update.py',
+   'PYMODULE'),
   ('dataclasses',
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\dataclasses.py',
