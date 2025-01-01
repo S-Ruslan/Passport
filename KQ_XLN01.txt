@@ -1,8 +1,6 @@
 [DEFAULT]
 Name_product: Фитинг пневматический
-Declaration: №тест1111тест1111
-DS: 11.11.1111
-DE: 22.22.2222
+Declaration: -
 Number_lines: 4
 line1: Среда
 value1: Сжатый воздух, вакуум

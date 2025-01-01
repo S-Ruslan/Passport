@@ -83,8 +83,7 @@ def run_main_code():
     # Список шаблонов и соответствующих им имен конфигов
     patterns_and_names = {
         r'KQ.*XLN01': 'KQ_XLN01.txt',
-        r'KQ.*XRT01': 'KQ_XRT01.txt',
-        r'KQ.*XRT02': 'KQ_XRT02.txt'
+        r'AW.*XLN01': 'AW_XLN01.txt'
     }
 
     # Переменная для хранения имени конфигурации
@@ -96,7 +95,8 @@ def run_main_code():
             config_name = config
             break
     else:
-        print(f"Текст '{name}' не соответствует ни одному из шаблонов.")
+        output_text.delete('1.0', tk.END)  # Очищаем поле вывода перед новой записью
+        return output_text.insert(tk.END, f"Артикул '{name}' не соответствует ни одному из шаблонов.")
 
     config = configparser.ConfigParser()
     # Указываем разделитель между ключами и значениями
@@ -106,13 +106,15 @@ def run_main_code():
         with open(config_name, encoding='utf-8') as file:
             config.read_file(file)
     except FileNotFoundError:
-        print(f"Файл конфигурации {config_name} не найден.")
+        output_text.delete('1.0', tk.END)  # Очищаем поле вывода перед новой записью
+        return output_text.insert(tk.END, f"Файл конфигурации {config_name} не найден.")
 
     # Получаем значения из секции DEFAULT
     try:
         data = dict(config['DEFAULT'])
     except KeyError:
-        print("Секция DEFAULT не найдена в файле конфигурации.")
+        output_text.delete('1.0', tk.END)  # Очищаем поле вывода перед новой записью
+        return output_text.insert(tk.END, "Секция DEFAULT не найдена в файле конфигурации.")
 
     num_lines = int(data['Number_lines'])
 
@@ -120,8 +122,11 @@ def run_main_code():
         # Здесь странный код, суть - нужно обновить словарь и кол-во строк для вывода
         # словарь data обновляется нормально (Mutable объект), а счетчик строк (num_lines) обновляться не хочет
         # теоретически, можно поиграть с объявлением global, но возникают конфликты. Поэтому сделал так:
-        # сама функция при работе обновляет словарь и возвращает в довесок обновленное кол-во строк
+        # сама функция при работе обновляет словарь и возвращает в довесок обновленное кол-во строк, если меняется.
+        # Не везде будет меняться, но для унификации логика будет везде одна и та же
         num_lines = data_update_kqxln01(name, data, num_lines)
+    elif config_name == 'AW_XLN01.txt':
+        num_lines = data_update_awxln01(name, data, num_lines)
 
     # Ниже пошла обработка шаблона и замена полей
     for paragraph in document.paragraphs:
@@ -147,8 +152,8 @@ def run_main_code():
                 current_time = datetime.now()
                 # Извлекаем год, месяц и день
                 year = current_time.year
-                month = current_time.month
-                day = current_time.day
+                month = f"{current_time.month:02}" # Форматирование месяца до 2 знаков
+                day = f"{current_time.day:02}" # Форматирование дня до 2 знаков
                 new_string = f"№{year}.{month}.{day}\\{executor}\\{passport_number} от {day}.{month}.{year}"
                 replace_text(run, run.text, new_string)
                 break

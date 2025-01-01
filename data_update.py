@@ -19,6 +19,7 @@ def contains_any_substring(long_string, substrings):
 #
 #   return(num_lines)
 def data_update_kqxln01(name, data, num_lines):
+    #value4 - место для БРС, value5 - место для резьбы (если есть)
     pattern = r"([A-Z]+)(\d{2})-(.+)-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров
     match = re.search(pattern, name)
     if match:
@@ -29,14 +30,14 @@ def data_update_kqxln01(name, data, num_lines):
         # Сейчас обработаем резьбовые фитинги
         substrings = ['01', '02', '03', '04', 'M3', 'M5', 'M6']
         #  Если будет резьба, нужно добавить 1 строчку в таблицу
-        have_rezba = contains_any_substring(second_group, substrings)
+        have_thread = contains_any_substring(second_group, substrings)
         if first_part in ['KQH', 'KQS', 'KQF', 'KQL', 'KQW', 'KQK', 'KQV', 'KQT', 'KQY',
-                          'KQVF', 'KQU', 'KQLF'] and have_rezba:
+                          'KQVF', 'KQU', 'KQLF'] and have_thread:
             num_lines += 1
             if first_digits == '16':
                 data['value2'] = str(0.8)
             data['value4'] = str(first_digits).lstrip("0")
-            rezba = {
+            thread = {
                 '01': 'R1/8',
                 '02': 'R1/4',
                 '03': 'R3/8',
@@ -54,8 +55,8 @@ def data_update_kqxln01(name, data, num_lines):
                 'M6': 'M6',
             }.get(second_group, '')
             if first_part == 'KQLF':  # У KQLF обозначение резьб как R, а по факту G
-                rezba = rezba.replace('R', 'G')
-            data['value5'] = rezba
+                thread = thread.replace('R', 'G')
+            data['value5'] = thread
 
         # Условия для фитингов БРС
         if second_group in ['99', '00']:
@@ -88,3 +89,40 @@ def data_update_kqxln01(name, data, num_lines):
         data['value4'] = str(first_digits).lstrip("0")
 
     return(num_lines)
+
+def data_update_awxln01(name, data, num_lines):
+   #value5 - расход, value7 - резьба
+   pattern = r"AW(\d{4})-(.+)-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров
+   match = re.search(pattern, name)
+   if match:
+       # Извлекаем группы
+       sizes = str(match.group(1))  # Типоразмер
+       threads = str(match.group(2))  # Резьба
+       size = {
+           '2000': '550',
+           '3000': '2000',
+           '4000': '4000',
+           '5000': '5000'
+       }.get(sizes, '')
+       data['value5'] = size
+       thread = {
+           'F01': 'G1/8',
+           'F02': 'G1/4',
+           'F03': 'G3/8',
+           'F04': 'G1/2',
+           'F06': 'G3/4',
+           'F10': 'G1',
+           'F01D': 'G1/8',
+           'F02D': 'G1/4',
+           'F03D': 'G3/8',
+           'F04D': 'G1/2',
+           'F06D': 'G3/4',
+           'F10D': 'G1'
+
+       }.get(threads, '')
+       data['value7'] = thread
+       #Условие для AW4000-06, там расход 4500 вместо 4000
+       if size == '4000' and thread == 'G3/4':
+           data['value5'] = str(4500)
+
+   return (num_lines)
