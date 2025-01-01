@@ -1,3 +1,8 @@
+import contextlib
+import io
+import sys
+import os
+from docx2pdf import convert
 from docx import Document
 from docx.shared import Pt, RGBColor
 from datetime import datetime
@@ -7,8 +12,8 @@ import re
 import tkinter as tk
 
 # Общая логика работы программы
-# Создаем интерфейс с кнопками и полями, привязываем к кнопке функцию обработке полей и запуск основной программы
-# Определяется используемый шаблон паспорта (выбирался на начальном поле),
+# создаем интерфейс с кнопками и полями, привязываем к кнопке функцию обработке полей и запуск основной программы
+# определяется используемый шаблон паспорта (выбирался на начальном поле),
 # далее этот docx шаблон подцепляется программой и в нем будут происходить все изменения (размеченные поля заменяются
 # на характеристики продукции)
 # Далее введенный артикул с помощью регулярных выражений соотносится к серии продукции и на основе этой серии
@@ -28,7 +33,7 @@ import tkinter as tk
 # текущий момент не смог
 #
 
-# создание глобаных переменных для работы с полями интерфейса
+# создание глобальных переменных для работы с полями интерфейса
 name = ""
 passport_number = ""
 executor = ""
@@ -36,6 +41,21 @@ company = ""
 data = []
 num_lines = 0
 
+
+def suppress_stdout_stderr(func, *args, **kwargs):
+    with open(os.devnull, 'w') as devnull:
+        with contextlib.redirect_stdout(devnull), contextlib.redirect_stderr(devnull):
+            return func(*args, **kwargs)
+
+# Функция для определения директории фаила (exe фаил плохо определяет сам созданные им docx, а иначе не получается сконвертировать в pdf
+def get_current_directory():
+    # Проверка, находимся ли мы в frozen среде (то есть, запущены как EXE)
+    if getattr(sys, 'frozen', False):
+        # Если да, возвращаем директорию, где находится EXE-файл
+        return os.path.dirname(sys.executable)
+    else:
+        # Иначе возвращаем директорию, где находится исходный Python-файл
+        return os.path.dirname(os.path.abspath(__file__))
 
 def replace_text(run, old_text, new_text):
     if old_text in run.text:
@@ -83,7 +103,8 @@ def run_main_code():
     # Список шаблонов и соответствующих им имен конфигов
     patterns_and_names = {
         r'KQ.*XLN01': 'KQ_XLN01.txt',
-        r'AW.*XLN01': 'AW_XLN01.txt'
+        r'AW.*XLN01': 'AW_XLN01.txt',
+        r'AF.*XLN01': 'AF_XLN01.txt'
     }
 
     # Переменная для хранения имени конфигурации
@@ -127,6 +148,8 @@ def run_main_code():
         num_lines = data_update_kqxln01(name, data, num_lines)
     elif config_name == 'AW_XLN01.txt':
         num_lines = data_update_awxln01(name, data, num_lines)
+    elif config_name == 'AF_XLN01.txt':
+        num_lines = data_update_afxln01(name, data, num_lines)
 
     # Ниже пошла обработка шаблона и замена полей
     for paragraph in document.paragraphs:
@@ -197,50 +220,113 @@ def run_main_code():
                                 replace_text(run, run.text, '')
                                 break
 
-    document.save(name + '.docx')
+    # Получаем правильную директорию запущенного фаила (иначе exe фаил может некорректно работать)
+    current_dir = get_current_directory()
+
+    if selected_format.get() == "docx":
+        # Сохраняем документ в текущей директории
+        full_path_docx = os.path.join(current_dir, name + '.docx')
+        document.save(full_path_docx)
+    elif selected_format.get() == "pdf":
+        # Сохраняем временный документ в текущей директории
+        full_path_docx = os.path.join(current_dir, name + '.docx')
+        document.save(full_path_docx)
+        # Конвертируем docx в pdf
+        # full_path_pdf = os.path.join(current_dir, name + '.pdf')
+        full_path_pdf = name + '.pdf'
+        # Надстройка для перехвата потока вывода записи прогресса в консоль функцией convert, для того,
+        # чтобы можно было создать exe фаил с параметром --noconsole, а иначе некрасиво
+        suppress_stdout_stderr(convert, full_path_docx, full_path_pdf)
+        # Удаляем временный файл
+        os.remove(full_path_docx)
+
+
     output_text.delete('1.0', tk.END)  # Очищаем поле вывода перед новой записью
     output_text.insert(tk.END, 'Программа успешно отработала!\n')  # Сообщение об успехе
+
+    # проверка на чекбокс, просто if checkbox_out не срабатывает
+    if checkbox_out.get():
+        for i in range(1, num_lines + 1):
+            line_key = f'line{i}'
+            value_key = f'value{i}'
+            output_text.insert(tk.END, f'{data[line_key]}:   {data[value_key]}\n')
 
 
 # Создаем главное окно приложения
 root = tk.Tk()
 root.title("Ввод данных")
 
-# Поле для ввода артикула
-label_name = tk.Label(root, text="Артикул:")
-label_name.pack(anchor='w')
-entry_name = tk.Entry(root, width=20)
-entry_name.pack(anchor='w', fill='x')
-
-# Поле для ввода номера паспорта
-label_passport = tk.Label(root, text="Номер паспорта:")
-label_passport.pack(anchor='w')
-entry_passport = tk.Entry(root, width=10)
-entry_passport.pack(anchor='w', fill='x')
-
-# Поле для ввода исполнителя
-label_executor = tk.Label(root, text="Исполнитель:")
-label_executor.pack(anchor='w')
-entry_executor = tk.Entry(root, width=10)
-entry_executor.pack(anchor='w', fill='x')
-
-# Переменная для хранения выбранного значения
+# Переменные для хранения выбранного значения радиокнопок
 selected_company = tk.StringVar()
 selected_company.set("SMC")  # По умолчанию выбираем SMC
 
-# Радиокнопки для выбора компании
-radio_smc = tk.Radiobutton(root, text="SMC", variable=selected_company, value="SMC")
-radio_smc.pack(anchor='w')
+selected_format = tk.StringVar()
+selected_format.set("docx")  # По умолчанию выбираем docx
 
-radio_indutech = tk.Radiobutton(root, text="Индутех", variable=selected_company, value="Indutech")
-radio_indutech.pack(anchor='w')
+# Чекбокс
+checkbox_out = tk.BooleanVar(value=False)  # Переменная для состояния чекбокса
+
+
+# Поле для ввода артикула
+label_name = tk.Label(root, text="Артикул:")
+label_name.grid(row=0, column=0, sticky='w', pady=(10, 0))
+entry_name = tk.Entry(root, width=30)
+entry_name.grid(row=0, column=1, sticky='w', pady=(10, 0))
+
+# Поле для ввода номера паспорта
+label_passport = tk.Label(root, text="Номер паспорта:")
+label_passport.grid(row=1, column=0, sticky='w', pady=(3, 0))
+entry_passport = tk.Entry(root, width=30)
+entry_passport.grid(row=1, column=1, sticky='w', pady=(3, 0))
+
+# Поле для ввода исполнителя
+label_executor = tk.Label(root, text="Исполнитель:")
+label_executor.grid(row=2, column=0, sticky='w', pady=(3, 0))
+entry_executor = tk.Entry(root, width=30)
+entry_executor.grid(row=2, column=1, sticky='w', pady=(3, 0))
+
+# Радиокнопки для выбора компании
+radio_frame = tk.Frame(root)
+radio_frame.grid(row=3, columnspan=3, sticky='ew')  # Растягиваем фрейм на три колонки
+
+label_company = tk.Label(radio_frame, text="Шаблон:")
+label_company.grid(row=3, column=0, padx=(0, 0), pady=(3, 0))
+
+radio_smc = tk.Radiobutton(radio_frame, text="SMC", variable=selected_company, value="SMC")
+radio_smc.grid(row=3, column=1, padx=(30, 20), pady=(3, 0))
+
+radio_indutech = tk.Radiobutton(radio_frame, text="Индутех", variable=selected_company, value="Indutech")
+radio_indutech.grid(row=3, column=2, padx=(0, 0), pady=(3, 0))
+
+# Радиокнопки для выбора формата
+radio_frame2 = tk.Frame(root)
+radio_frame2.grid(row=4, columnspan=3, sticky='ew')  # Растягиваем фрейм на три колонки
+
+label_format = tk.Label(radio_frame2, text="Формат:")
+label_format.grid(row=4, column=0, padx=(0, 0), pady=(3, 0))
+
+radio_docx = tk.Radiobutton(radio_frame2, text="docx", variable=selected_format, value="docx")
+radio_docx.grid(row=4, column=1, padx=(30, 20), pady=(3, 0))
+
+radio_pdf = tk.Radiobutton(radio_frame2, text="pdf", variable=selected_format, value="pdf")
+radio_pdf.grid(row=4, column=2, padx=(0, 0), pady=(3, 0))
+
+# Заголовок для чекбокса
+radio_frame3 = tk.Frame(root)
+radio_frame3.grid(row=5, columnspan=2, sticky='ew')  # Растягиваем фрейм на две колонки
+
+checkbox_label = tk.Label(radio_frame3, text="Нужен вывод заполненных тех.характеристик?")
+checkbox_label.grid(row=5, column=0, sticky='w')
+
+checkbox = tk.Checkbutton(radio_frame3, variable=checkbox_out)
+checkbox.grid(row=5, column=1, sticky='w')
 
 # Поле вывода результата
 output_text = tk.Text(root, height=8, width=40)
-output_text.pack(anchor='w')
+output_text.grid(row=6, column=0, columnspan=2, pady=(10, 10), padx=(3, 3))
 
 # Кнопка подтверждения
 button_confirm = tk.Button(root, text="Подтвердить", command=get_input)
-button_confirm.pack(pady=(10, 0))
+button_confirm.grid(row=7, column=0, columnspan=2, pady=(10, 0))
 
 root.mainloop()

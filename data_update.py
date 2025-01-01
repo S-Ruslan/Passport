@@ -87,7 +87,6 @@ def data_update_kqxln01(name, data, num_lines):
         # Извлекаем группы
         first_digits = str(match.group(1))
         data['value4'] = str(first_digits).lstrip("0")
-
     return(num_lines)
 
 def data_update_awxln01(name, data, num_lines):
@@ -124,5 +123,42 @@ def data_update_awxln01(name, data, num_lines):
        #Условие для AW4000-06, там расход 4500 вместо 4000
        if size == '4000' and thread == 'G3/4':
            data['value5'] = str(4500)
+   return (num_lines)
 
+def data_update_afxln01(name, data, num_lines):
+   #value4 - расход, value6 - резьба
+   pattern = r"AF(\d{4})-(.+)-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров
+   match = re.search(pattern, name)
+   if match:
+       # Извлекаем группы
+       sizes = str(match.group(1))  # Типоразмер
+       threads = str(match.group(2))  # Резьба
+       size = {
+           '1000': '110',
+           '2000': '750',
+           '3000': '1500',
+           '4000': '4000',
+           '5000': '7000'
+       }.get(sizes, '')
+       data['value4'] = size
+       thread = {
+           'M5': 'M5',
+           'F01': 'G1/8',
+           'F02': 'G1/4',
+           'F03': 'G3/8',
+           'F04': 'G1/2',
+           'F06': 'G3/4',
+           'F10': 'G1',
+           'F01D': 'G1/8',
+           'F02D': 'G1/4',
+           'F03D': 'G3/8',
+           'F04D': 'G1/2',
+           'F06D': 'G3/4',
+           'F10D': 'G1'
+
+       }.get(threads, '')
+       data['value6'] = thread
+       #Условие для AF4000-06, там расход 6000 вместо 4000
+       if size == '4000' and thread == 'G3/4':
+           data['value4'] = str(6000)
    return (num_lines)
