@@ -1,5 +1,4 @@
 import contextlib
-import io
 import sys
 import os
 from docx2pdf import convert
@@ -107,7 +106,11 @@ def run_main_code():
     patterns_and_names = {
         r'KQ.*XLN01': 'KQ_XLN01.txt',
         r'AW.*XLN01': 'AW_XLN01.txt',
-        r'AF.*XLN01': 'AF_XLN01.txt'
+        r'AF.*XLN01': 'AF_XLN01.txt',
+        r'AR.*XLN01': 'AR_XLN01.txt',
+        r'AL.*XLN01': 'AL_XLN01.txt',
+        r'VHS.*XLN01': 'VHS_XLN01.txt',
+        r'AC.*XLN01': 'AC_XLN01.txt'
     }
 
     # Переменная для хранения имени конфигурации
@@ -155,6 +158,14 @@ def run_main_code():
         num_lines = data_update_awxln01(name, data, num_lines)
     elif config_name == 'AF_XLN01.txt':
         num_lines = data_update_afxln01(name, data, num_lines)
+    elif config_name == 'AR_XLN01.txt':
+        num_lines = data_update_arxln01(name, data, num_lines)
+    elif config_name == 'AL_XLN01.txt':
+        num_lines = data_update_alxln01(name, data, num_lines)
+    elif config_name == 'VHS_XLN01.txt':
+        num_lines = data_update_vhsxln01(name, data, num_lines)
+    elif config_name == 'AC_XLN01.txt':
+        num_lines = data_update_acxln01(name, data, num_lines)
 
     # Ниже пошла обработка шаблона и замена полей
     for paragraph in document.paragraphs:
