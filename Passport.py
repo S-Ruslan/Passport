@@ -94,12 +94,15 @@ def get_input():
 
 
 def run_main_code():
+    # Получаем значение директории где исполняется программа (для открытия шаблонов, конфигов и записи в pdf)
+    current_dir = get_current_directory()
     # Загружаем существующий шаблон .docx
     if selected_company.get() == "SMC":
-        document = Document('template_SMCpart.docx')
+        full_path_doc = os.path.join(current_dir, 'templates', 'template_SMCpart.docx')
     elif selected_company.get() == "Indutech":
-        document = Document('template_INDUTECHpart.docx')
+        full_path_doc = os.path.join(current_dir, 'templates', 'template_INDUTECHpart.docx')
 
+    document = Document(full_path_doc)
     # Список шаблонов и соответствующих им имен конфигов
     patterns_and_names = {
         r'KQ.*XLN01': 'KQ_XLN01.txt',
@@ -122,9 +125,11 @@ def run_main_code():
     config = configparser.ConfigParser()
     # Указываем разделитель между ключами и значениями
     config.optionxform = str
-    # Читаем файл
+    # Читаем файл, конфигурации лежат в отдельной папке configs
+    #current_dir = get_current_directory()
+    full_path_config = os.path.join(current_dir, 'configs', config_name)
     try:
-        with open(config_name, encoding='utf-8') as file:
+        with open(full_path_config, encoding='utf-8') as file:
             config.read_file(file)
     except FileNotFoundError:
         output_text.delete('1.0', tk.END)  # Очищаем поле вывода перед новой записью
@@ -221,7 +226,7 @@ def run_main_code():
                                 break
 
     # Получаем правильную директорию запущенного фаила (иначе exe фаил может некорректно работать)
-    current_dir = get_current_directory()
+    #current_dir = get_current_directory()
 
     if selected_format.get() == "docx":
         # Сохраняем документ в текущей директории
