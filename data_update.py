@@ -95,7 +95,7 @@ def data_update_kqxln01(name, data, num_lines):
 
 def data_update_awxln01(name, data, num_lines):
     #value5 - расход, value7 - резьба
-    pattern = r"AW(\d{4})-(.+)-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров
+    pattern = r"AW(\d{4})-(F?\d{2})(?:D)?-(.+)"  # Вытаскиваем куски до и после черты для определения размеров
     match = re.search(pattern, name)
     if match:
         # Извлекаем группы
@@ -114,13 +114,7 @@ def data_update_awxln01(name, data, num_lines):
             'F03': 'G3/8',
             'F04': 'G1/2',
             'F06': 'G3/4',
-            'F10': 'G1',
-            'F01D': 'G1/8',
-            'F02D': 'G1/4',
-            'F03D': 'G3/8',
-            'F04D': 'G1/2',
-            'F06D': 'G3/4',
-            'F10D': 'G1'
+            'F10': 'G1'
         }.get(threads, '')
         data['value7'] = thread
         #Условие для AW4000-06, там расход 4500 вместо 4000
@@ -131,7 +125,7 @@ def data_update_awxln01(name, data, num_lines):
 
 def data_update_afxln01(name, data, num_lines):
     #value4 - расход, value6 - резьба
-    pattern = r"AF(\d{4})-(.+)-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров
+    pattern = r"AF(\d{4})-(F?\d{2})(?:D)?-(.+)"  # Вытаскиваем куски до и после черты для определения размеров
     match = re.search(pattern, name)
     if match:
         # Извлекаем группы
@@ -152,14 +146,7 @@ def data_update_afxln01(name, data, num_lines):
             'F03': 'G3/8',
             'F04': 'G1/2',
             'F06': 'G3/4',
-            'F10': 'G1',
-            'F01D': 'G1/8',
-            'F02D': 'G1/4',
-            'F03D': 'G3/8',
-            'F04D': 'G1/2',
-            'F06D': 'G3/4',
-            'F10D': 'G1'
-
+            'F10': 'G1'
         }.get(threads, '')
         data['value6'] = thread
         #Условие для AF4000-06, там расход 6000 вместо 4000
@@ -285,7 +272,7 @@ def data_update_vhsxln01(name, data, num_lines):
 
 def data_update_acxln01(name, data, num_lines):
     #value5 - расход, value7 - резьба
-    pattern = r"AC(\d{4})-(.+)-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров
+    pattern = r"AC(\d{4})-(F?\d{2})(?:D)?-(.+)"  # Вытаскиваем куски до и после черты для определения размеров
     match = re.search(pattern, name)
     if match:
         # Извлекаем группы
@@ -308,13 +295,280 @@ def data_update_acxln01(name, data, num_lines):
             'F03': 'G3/8',
             'F04': 'G1/2',
             'F06': 'G3/4',
-            'F10': 'G1',
-            'F01D': 'G1/8',
-            'F02D': 'G1/4',
-            'F03D': 'G3/8',
-            'F04D': 'G1/2',
-            'F06D': 'G3/4',
-            'F10D': 'G1'
+            'F10': 'G1'
         }.get(threads, '')
         data['value7'] = thread
+    return (num_lines)
+
+def data_update_amgxkv01(name, data, num_lines):
+    #value3 - расход, value5 - резьба
+    pattern = r"AMG(.+)-(F?\d{2})(?:D)?-(.+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        sizes = str(match.group(1))  # Типоразмер
+        threads = str(match.group(2))  # Резьба
+        size = {
+            '150C': '300',
+            '250C': '750',
+            '350C': '1500',
+            '450C': '2200',
+            '550C': '3700',
+            '650': '6000',
+            '850': '12000'
+        }.get(sizes, '')
+        data['value3'] = size
+        thread = {
+            'F01': 'G1/8',
+            'F02': 'G1/4',
+            'F03': 'G3/8',
+            'F04': 'G1/2',
+            'F06': 'G3/4',
+            'F10': 'G1',
+            'F14': 'G1 1/2',
+            'F20': 'G2',
+            '01': 'Rc1/8',
+            '02': 'Rc1/4',
+            '03': 'Rc3/8',
+            '04': 'Rc1/2',
+            '06': 'Rc3/4',
+            '10': 'Rc1',
+            '14': 'Rc1 1/2',
+            '20': 'Rc2'
+        }.get(threads, '')
+        data['value5'] = thread
+    return (num_lines)
+
+def data_update_affxkv01(name, data, num_lines):
+    #value4 - расход, value6 - резьба
+    pattern = r"AFF(.+)-(F?\d{2})(?:D)?(?:C)?-(.+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        sizes = str(match.group(1))  # Типоразмер
+        threads = str(match.group(2))  # Резьба
+        size = {
+            '2C': '300',
+            '4C': '750',
+            '8C': '1500',
+            '11C': '2200',
+            '22C': '3700',
+            '37B': '6000',
+            '75B': '12000'
+        }.get(sizes, '')
+        data['value4'] = size
+        thread = {
+            'F01': 'G1/8',
+            'F02': 'G1/4',
+            'F03': 'G3/8',
+            'F04': 'G1/2',
+            'F06': 'G3/4',
+            'F10': 'G1',
+            'F14': 'G1 1/2',
+            'F20': 'G2',
+            '01': 'Rc1/8',
+            '02': 'Rc1/4',
+            '03': 'Rc3/8',
+            '04': 'Rc1/2',
+            '06': 'Rc3/4',
+            '10': 'Rc1',
+            '14': 'Rc1 1/2',
+            '20': 'Rc2'
+        }.get(threads, '')
+        data['value6'] = thread
+    return (num_lines)
+
+def data_update_amxkv01(name, data, num_lines):
+    #value4 - расход, value6 - резьба
+    pattern = r"AM(.+)-(F?\d{2})(?:D)?(?:C)?-(.+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        sizes = str(match.group(1))  # Типоразмер
+        threads = str(match.group(2))  # Резьба
+        size = {
+            '150C': '300',
+            '250C': '750',
+            '350C': '1500',
+            '450C': '2200',
+            '550C': '3700',
+            '650': '6000',
+            '850': '12000'
+        }.get(sizes, '')
+        data['value4'] = size
+        thread = {
+            'F01': 'G1/8',
+            'F02': 'G1/4',
+            'F03': 'G3/8',
+            'F04': 'G1/2',
+            'F06': 'G3/4',
+            'F10': 'G1',
+            'F14': 'G1 1/2',
+            'F20': 'G2',
+            '01': 'Rc1/8',
+            '02': 'Rc1/4',
+            '03': 'Rc3/8',
+            '04': 'Rc1/2',
+            '06': 'Rc3/4',
+            '10': 'Rc1',
+            '14': 'Rc1 1/2',
+            '20': 'Rc2'
+        }.get(threads, '')
+        data['value6'] = thread
+    return (num_lines)
+
+def data_update_amdxkv01(name, data, num_lines):
+    #value4 - расход, value6 - резьба
+    pattern = r"AMD(.+)-(F?\d{2})(?:D)?(?:C)?-(.+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        sizes = str(match.group(1))  # Типоразмер
+        threads = str(match.group(2))  # Резьба
+        size = {
+            '150C': '200',
+            '250C': '500',
+            '350C': '1000',
+            '450C': '2000',
+            '550C': '3700',
+            '650': '6000',
+            '850': '12000'
+        }.get(sizes, '')
+        data['value4'] = size
+        thread = {
+            'F01': 'G1/8',
+            'F02': 'G1/4',
+            'F03': 'G3/8',
+            'F04': 'G1/2',
+            'F06': 'G3/4',
+            'F10': 'G1',
+            'F14': 'G1 1/2',
+            'F20': 'G2',
+            '01': 'Rc1/8',
+            '02': 'Rc1/4',
+            '03': 'Rc3/8',
+            '04': 'Rc1/2',
+            '06': 'Rc3/4',
+            '10': 'Rc1',
+            '14': 'Rc1 1/2',
+            '20': 'Rc2'
+        }.get(threads, '')
+        data['value6'] = thread
+    return (num_lines)
+
+def data_update_amhxkv01(name, data, num_lines):
+    #value4 - расход, value6 - резьба
+    pattern = r"AMH(.+)-(F?\d{2})(?:D)?(?:C)?-(.+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        sizes = str(match.group(1))  # Типоразмер
+        threads = str(match.group(2))  # Резьба
+        size = {
+            '150C': '200',
+            '250C': '500',
+            '350C': '1000',
+            '450C': '2000',
+            '550C': '3700',
+            '650': '6000',
+            '850': '12000'
+        }.get(sizes, '')
+        data['value4'] = size
+        thread = {
+            'F01': 'G1/8',
+            'F02': 'G1/4',
+            'F03': 'G3/8',
+            'F04': 'G1/2',
+            'F06': 'G3/4',
+            'F10': 'G1',
+            'F14': 'G1 1/2',
+            'F20': 'G2',
+            '01': 'Rc1/8',
+            '02': 'Rc1/4',
+            '03': 'Rc3/8',
+            '04': 'Rc1/2',
+            '06': 'Rc3/4',
+            '10': 'Rc1',
+            '14': 'Rc1 1/2',
+            '20': 'Rc2'
+        }.get(threads, '')
+        data['value6'] = thread
+    return (num_lines)
+
+def data_update_amexkv01(name, data, num_lines):
+    #value4 - расход, value6 - резьба
+    pattern = r"AME(.+)-(F?\d{2})(?:D)?(?:C)?-(.+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        sizes = str(match.group(1))  # Типоразмер
+        threads = str(match.group(2))  # Резьба
+        size = {
+            '150C': '200',
+            '250C': '500',
+            '350C': '1000',
+            '450C': '2000',
+            '550C': '3700',
+            '650': '6000',
+            '850': '12000'
+        }.get(sizes, '')
+        data['value4'] = size
+        thread = {
+            'F01': 'G1/8',
+            'F02': 'G1/4',
+            'F03': 'G3/8',
+            'F04': 'G1/2',
+            'F06': 'G3/4',
+            'F10': 'G1',
+            'F14': 'G1 1/2',
+            'F20': 'G2',
+            '01': 'Rc1/8',
+            '02': 'Rc1/4',
+            '03': 'Rc3/8',
+            '04': 'Rc1/2',
+            '06': 'Rc3/4',
+            '10': 'Rc1',
+            '14': 'Rc1 1/2',
+            '20': 'Rc2'
+        }.get(threads, '')
+        data['value6'] = thread
+    return (num_lines)
+
+def data_update_amfxkv01(name, data, num_lines):
+    #value4 - расход, value6 - резьба
+    pattern = r"AMF(.+)-(F?\d{2})(?:D)?(?:C)?-(.+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        sizes = str(match.group(1))  # Типоразмер
+        threads = str(match.group(2))  # Резьба
+        size = {
+            '150C': '200',
+            '250C': '500',
+            '350C': '1000',
+            '450C': '2000',
+            '550C': '3700',
+            '650': '6000',
+            '850': '12000'
+        }.get(sizes, '')
+        data['value4'] = size
+        thread = {
+            'F01': 'G1/8',
+            'F02': 'G1/4',
+            'F03': 'G3/8',
+            'F04': 'G1/2',
+            'F06': 'G3/4',
+            'F10': 'G1',
+            'F14': 'G1 1/2',
+            'F20': 'G2',
+            '01': 'Rc1/8',
+            '02': 'Rc1/4',
+            '03': 'Rc3/8',
+            '04': 'Rc1/2',
+            '06': 'Rc3/4',
+            '10': 'Rc1',
+            '14': 'Rc1 1/2',
+            '20': 'Rc2'
+        }.get(threads, '')
+        data['value6'] = thread
     return (num_lines)

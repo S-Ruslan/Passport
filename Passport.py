@@ -110,7 +110,14 @@ def run_main_code():
         r'AR.*XLN01': 'AR_XLN01.txt',
         r'AL.*XLN01': 'AL_XLN01.txt',
         r'VHS.*XLN01': 'VHS_XLN01.txt',
-        r'AC.*XLN01': 'AC_XLN01.txt'
+        r'AC.*XLN01': 'AC_XLN01.txt',
+        r'AMG\d{3}.*XKV01': 'AMG_XKV01.txt',
+        r'AFF.*XKV01': 'AFF_XKV01.txt',
+        r'AM\d{3}.*XKV01': 'AM_XKV01.txt',
+        r'AMD\d{3}.*XKV01': 'AMD_XKV01.txt',
+        r'AMH\d{3}.*XKV01': 'AMH_XKV01.txt',
+        r'AME\d{3}.*XKV01': 'AME_XKV01.txt',
+        r'AMF\d{3}.*XKV01': 'AMF_XKV01.txt'
     }
 
     # Переменная для хранения имени конфигурации
@@ -166,6 +173,20 @@ def run_main_code():
         num_lines = data_update_vhsxln01(name, data, num_lines)
     elif config_name == 'AC_XLN01.txt':
         num_lines = data_update_acxln01(name, data, num_lines)
+    elif config_name == 'AMG_XKV01.txt':
+        num_lines = data_update_amgxkv01(name, data, num_lines)
+    elif config_name == 'AFF_XKV01.txt':
+        num_lines = data_update_affxkv01(name, data, num_lines)
+    elif config_name == 'AM_XKV01.txt':
+        num_lines = data_update_amxkv01(name, data, num_lines)
+    elif config_name == 'AMD_XKV01.txt':
+        num_lines = data_update_amdxkv01(name, data, num_lines)
+    elif config_name == 'AMH_XKV01.txt':
+        num_lines = data_update_amhxkv01(name, data, num_lines)
+    elif config_name == 'AME_XKV01.txt':
+        num_lines = data_update_amexkv01(name, data, num_lines)
+    elif config_name == 'AMF_XKV01.txt':
+        num_lines = data_update_amfxkv01(name, data, num_lines)
 
     # Ниже пошла обработка шаблона и замена полей
     for paragraph in document.paragraphs:
