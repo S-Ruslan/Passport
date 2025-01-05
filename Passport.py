@@ -117,7 +117,10 @@ def run_main_code():
         r'AMD\d{3}.*XKV01': 'AMD_XKV01.txt',
         r'AMH\d{3}.*XKV01': 'AMH_XKV01.txt',
         r'AME\d{3}.*XKV01': 'AME_XKV01.txt',
-        r'AMF\d{3}.*XKV01': 'AMF_XKV01.txt'
+        r'AMF\d{3}.*XKV01': 'AMF_XKV01.txt',
+        r'SY\d{2}20.*XBR01': 'SY_20_XBR01.txt',
+        r'SY\d{2}20.*XRT01': 'SY_20_XRT01.txt',
+        r'SY\d{2}20.*RU01': 'SY_20_RU01.txt'
     }
 
     # Переменная для хранения имени конфигурации
@@ -187,6 +190,8 @@ def run_main_code():
         num_lines = data_update_amexkv01(name, data, num_lines)
     elif config_name == 'AMF_XKV01.txt':
         num_lines = data_update_amfxkv01(name, data, num_lines)
+    elif re.match(r'SY\d{2}20.*', name):
+        num_lines = data_update_sy_20(name, data, num_lines)
 
     # Ниже пошла обработка шаблона и замена полей
     for paragraph in document.paragraphs:
