@@ -39,6 +39,7 @@ executor = ""
 company = ""
 data = []
 num_lines = 0
+count = ""
 
 
 def suppress_stdout_stderr(func, *args, **kwargs):
@@ -46,7 +47,8 @@ def suppress_stdout_stderr(func, *args, **kwargs):
         with contextlib.redirect_stdout(devnull), contextlib.redirect_stderr(devnull):
             return func(*args, **kwargs)
 
-# Функция для определения директории фаила (exe фаил плохо определяет сам созданные им docx, а иначе не получается сконвертировать в pdf
+# Функция для определения директории фаила (exe фаил плохо определяет сам созданные им docx,
+# а иначе не получается сконвертировать в pdf
 def get_current_directory():
     # Проверка, находимся ли мы в frozen среде (то есть, запущены как EXE)
     if getattr(sys, 'frozen', False):
@@ -84,21 +86,26 @@ def format_text_onleft(paragraph):
 # функция обработчик нажатия на кнопку
 def get_input():
     # объявление глобальных переменных (для считывания с окна ввода)
-    global name, passport_number, executor, selected_company
+    global name, passport_number, executor, selected_company, count
     name = entry_name.get()
     passport_number = entry_passport.get()
     executor = entry_executor.get()
+    count = entry_count.get()
     # запуск основного кода программы
     run_main_code()
 
 
 def run_main_code():
-    # Получаем значение директории где исполняется программа (для открытия шаблонов, конфигов и записи в pdf)
+    # Получаем значение директории, где исполняется программа (для открытия шаблонов, конфигов и записи в pdf)
     current_dir = get_current_directory()
     # Загружаем существующий шаблон .docx
-    if selected_company.get() == "SMC":
+    if selected_company.get() == "SMC" and checkbox_stamp.get():
+        full_path_doc = os.path.join(current_dir, 'templates', 'template_SMCpart_stamp.docx')
+    elif selected_company.get() == "SMC" and not checkbox_stamp.get():
         full_path_doc = os.path.join(current_dir, 'templates', 'template_SMCpart.docx')
-    elif selected_company.get() == "Indutech":
+    elif selected_company.get() == "Indutech" and checkbox_stamp.get():
+        full_path_doc = os.path.join(current_dir, 'templates', 'template_INDUTECHpart_stamp.docx')
+    elif selected_company.get() == "Indutech" and not checkbox_stamp.get():
         full_path_doc = os.path.join(current_dir, 'templates', 'template_INDUTECHpart.docx')
 
     document = Document(full_path_doc)
@@ -236,6 +243,10 @@ def run_main_code():
                             replace_text(run, run.text, name)
                             format_text_onright(paragraph)
                             break
+                        if 'count' in run.text:
+                            replace_text(run, run.text, count)
+                            format_text_onright(paragraph)
+                            break
 
                         for i in range(1, num_lines + 1):
                             line_key = f'line{i}'
@@ -306,7 +317,8 @@ selected_format = tk.StringVar()
 selected_format.set("docx")  # По умолчанию выбираем docx
 
 # Чекбокс
-checkbox_out = tk.BooleanVar(value=False)  # Переменная для состояния чекбокса
+checkbox_stamp = tk.BooleanVar(value=False)  # Переменная для состояния чекбокса печати
+checkbox_out = tk.BooleanVar(value=False)  # Переменная для состояния чекбокса вывода
 
 
 # Поле для ввода артикула
@@ -327,48 +339,64 @@ label_executor.grid(row=2, column=0, sticky='w', pady=(3, 0))
 entry_executor = tk.Entry(root, width=30)
 entry_executor.grid(row=2, column=1, sticky='w', pady=(3, 0))
 
+# Поле для ввода количества
+label_count = tk.Label(root, text="Количество:")
+label_count.grid(row=3, column=0, sticky='w', pady=(3, 0))
+entry_count = tk.Entry(root, width=30)
+entry_count.grid(row=3, column=1, sticky='w', pady=(3, 0))
+
 # Радиокнопки для выбора компании
 radio_frame = tk.Frame(root)
-radio_frame.grid(row=3, columnspan=3, sticky='ew')  # Растягиваем фрейм на три колонки
+radio_frame.grid(row=4, columnspan=3, sticky='ew')  # Растягиваем фрейм на три колонки
 
 label_company = tk.Label(radio_frame, text="Шаблон:")
-label_company.grid(row=3, column=0, padx=(0, 0), pady=(3, 0))
+label_company.grid(row=4, column=0, padx=(0, 0), pady=(3, 0))
 
 radio_smc = tk.Radiobutton(radio_frame, text="SMC", variable=selected_company, value="SMC")
-radio_smc.grid(row=3, column=1, padx=(30, 20), pady=(3, 0))
+radio_smc.grid(row=4, column=1, padx=(30, 20), pady=(3, 0))
 
 radio_indutech = tk.Radiobutton(radio_frame, text="Индутех", variable=selected_company, value="Indutech")
-radio_indutech.grid(row=3, column=2, padx=(0, 0), pady=(3, 0))
+radio_indutech.grid(row=4, column=2, padx=(0, 0), pady=(3, 0))
 
 # Радиокнопки для выбора формата
 radio_frame2 = tk.Frame(root)
-radio_frame2.grid(row=4, columnspan=3, sticky='ew')  # Растягиваем фрейм на три колонки
+radio_frame2.grid(row=5, columnspan=3, sticky='ew')  # Растягиваем фрейм на три колонки
 
 label_format = tk.Label(radio_frame2, text="Формат:")
-label_format.grid(row=4, column=0, padx=(0, 0), pady=(3, 0))
+label_format.grid(row=5, column=0, padx=(0, 0), pady=(3, 0))
 
 radio_docx = tk.Radiobutton(radio_frame2, text="docx", variable=selected_format, value="docx")
-radio_docx.grid(row=4, column=1, padx=(30, 20), pady=(3, 0))
+radio_docx.grid(row=5, column=1, padx=(30, 20), pady=(3, 0))
 
 radio_pdf = tk.Radiobutton(radio_frame2, text="pdf", variable=selected_format, value="pdf")
-radio_pdf.grid(row=4, column=2, padx=(0, 0), pady=(3, 0))
+radio_pdf.grid(row=5, column=2, padx=(0, 0), pady=(3, 0))
 
 # Заголовок для чекбокса
 radio_frame3 = tk.Frame(root)
-radio_frame3.grid(row=5, columnspan=2, sticky='ew')  # Растягиваем фрейм на две колонки
+radio_frame3.grid(row=6, columnspan=2, sticky='ew')  # Растягиваем фрейм на две колонки
 
-checkbox_label = tk.Label(radio_frame3, text="Нужен вывод заполненных тех.характеристик?")
-checkbox_label.grid(row=5, column=0, sticky='w')
+checkbox_label = tk.Label(radio_frame3, text="Нужна печать исполнителя?")
+checkbox_label.grid(row=6, column=0, sticky='w')
 
-checkbox = tk.Checkbutton(radio_frame3, variable=checkbox_out)
-checkbox.grid(row=5, column=1, sticky='w')
+checkbox = tk.Checkbutton(radio_frame3, variable=checkbox_stamp)
+checkbox.grid(row=6, column=1, sticky='w')
+
+# Заголовок для чекбокса
+radio_frame4 = tk.Frame(root)
+radio_frame4.grid(row=7, columnspan=2, sticky='ew')  # Растягиваем фрейм на две колонки
+
+checkbox_label = tk.Label(radio_frame4, text="Нужен вывод заполненных тех.характеристик?")
+checkbox_label.grid(row=7, column=0, sticky='w')
+
+checkbox = tk.Checkbutton(radio_frame4, variable=checkbox_out)
+checkbox.grid(row=7, column=1, sticky='w')
 
 # Поле вывода результата
 output_text = tk.Text(root, height=8, width=40)
-output_text.grid(row=6, column=0, columnspan=2, pady=(10, 10), padx=(3, 3))
+output_text.grid(row=8, column=0, columnspan=2, pady=(10, 10), padx=(3, 3))
 
 # Кнопка подтверждения
 button_confirm = tk.Button(root, text="Подтвердить", command=get_input)
-button_confirm.grid(row=7, column=0, columnspan=2, pady=(10, 0))
+button_confirm.grid(row=9, column=0, columnspan=2, pady=(10, 0))
 
 root.mainloop()
