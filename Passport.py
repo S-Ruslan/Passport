@@ -27,11 +27,6 @@ import tkinter as tk
 # Отсутствуют какие-либо проверки на кривость введенных выражений, подразумевается, что артикулы будут 100% корректны
 # и взяты из CRM. Не писал, ибо нет задачи исправлять пользователей, актуально максимально расширить конфиг. фаилы
 
-# Известные баги:
-# В полях почему то не работает ctrl+v при русской раскладке клавиатуры. На англ. норм, решить проблему на
-# текущий момент не смог
-#
-
 # создание глобальных переменных для работы с полями интерфейса
 name = ""
 passport_number = ""
@@ -42,6 +37,19 @@ num_lines = 0
 count = ""
 
 
+def keypress(event):
+    if event.keycode == 86 and event.keysym != 'v':
+        event.widget.event_generate('<<Paste>>')
+        return "break"
+    elif event.keycode == 67 and event.keysym != 'c':
+        event.widget.event_generate('<<Copy>>')
+        return "break"
+    elif event.keycode == 88 and event.keysym != 'x':
+        event.widget.event_generate('<<Cut>>')
+        return "break"
+
+
+#подавление вывода консоли для exe
 def suppress_stdout_stderr(func, *args, **kwargs):
     with open(os.devnull, 'w') as devnull:
         with contextlib.redirect_stdout(devnull), contextlib.redirect_stderr(devnull):
@@ -307,6 +315,8 @@ def run_main_code():
 
 # Создаем главное окно приложения
 root = tk.Tk()
+#переопределение вставки, т.к. проблема с русской раскладкой
+root.bind_all("<Control-KeyPress>", keypress)
 root.title("Ввод данных")
 
 # Переменные для хранения выбранного значения радиокнопок
@@ -400,3 +410,4 @@ button_confirm = tk.Button(root, text="Подтвердить", command=get_inpu
 button_confirm.grid(row=9, column=0, columnspan=2, pady=(10, 0))
 
 root.mainloop()
+
