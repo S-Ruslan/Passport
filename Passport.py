@@ -91,6 +91,28 @@ def format_text_onleft(paragraph):
             paragraph.alignment = 0
 
 
+#проверка пустой ячейки
+def is_row_empty(row):
+    for cell in row.cells:
+        if cell.text.strip():
+            return False
+    return True
+
+#удаление пустых строк в таблице
+def delete_rows_with_empty_cells(document):
+    tables = document.tables
+
+    for table in tables:
+        rows_to_delete = []
+
+        for row in table.rows:
+            if is_row_empty(row):
+                rows_to_delete.append(row)
+
+        for row in rows_to_delete:
+            table._tbl.remove(row._tr)
+
+
 # функция обработчик нажатия на кнопку
 def get_input():
     # объявление глобальных переменных (для считывания с окна ввода)
@@ -281,6 +303,8 @@ def run_main_code():
                                 replace_text(run, run.text, '')
                                 break
 
+    #удаление пустых строк в таблице
+    delete_rows_with_empty_cells(document)
     # Получаем правильную директорию запущенного фаила (иначе exe фаил может некорректно работать)
     #current_dir = get_current_directory()
 
