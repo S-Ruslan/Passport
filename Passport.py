@@ -141,6 +141,12 @@ def run_main_code():
     document = Document(full_path_doc)
     # Список шаблонов и соответствующих им имен конфигов
     patterns_and_names = {
+        r'KFG.*XNT01': 'KFG_XNT01.txt',
+        r'KFG.*XRT01': 'KFG_XRT01.txt',
+        r'KFG.*XNC01': 'KFG_XNC01.txt',
+        r'KQG2.*XKV01': 'KQG2_XKV01.txt',
+        r'KQG2.*XLN01': 'KQG2_XLN01.txt',
+        r'KQG2.*XRT01': 'KQG2_XRT01.txt',
         r'KQ.*XLN01': 'KQ_XLN01.txt',
         r'AW.*XLN01': 'AW_XLN01.txt',
         r'AF.*XLN01': 'AF_XLN01.txt',
@@ -229,6 +235,20 @@ def run_main_code():
         num_lines = data_update_amfxkv01(name, data, num_lines)
     elif re.match(r'SY\d{2}20.*', name):
         num_lines = data_update_sy_20(name, data, num_lines)
+    elif config_name == 'KQG2_XRT01.txt':
+        num_lines = data_update_kqg2xrt01(name, data, num_lines)
+    elif config_name == 'KQG2_XLN01.txt':
+        num_lines = data_update_kqg2xln01(name, data, num_lines)
+    elif config_name == 'KQG2_XKV01.txt':
+        num_lines = data_update_kqg2xkv01(name, data, num_lines)
+    elif config_name == 'KFG_XNC01.txt':
+        num_lines = data_update_kfgxnc01(name, data, num_lines)
+    elif config_name == 'KFG_XRT01.txt':
+        num_lines = data_update_kfgxrt01(name, data, num_lines)
+    elif config_name == 'KFG_XNT01.txt':
+        num_lines = data_update_kfgxnt01(name, data, num_lines)
+
+
 
     # Ниже пошла обработка шаблона и замена полей
     for paragraph in document.paragraphs:
