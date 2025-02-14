@@ -1,0 +1,12 @@
+[DEFAULT]
+Name_product: Самозапирающееся соединение
+Declaration: -
+Number_lines: 4
+line1: Среда
+value1: Сжатый воздух
+line2: Макс. рабочее давление (МПа)
+value2: 0.9
+line3: Рабочая температура (оС)
+value3: 0 ~ +60
+line4:
+value4:

@@ -55,7 +55,7 @@ def data_update_kqxln01(name, data, num_lines):
                 'G04': 'G1/2',
                 'M3': 'M3',
                 'M5': 'M5',
-                'M6': 'M6',
+                'M6': 'M6'
             }.get(second_group, '')
             if first_part == 'KQLF':  # У KQLF обозначение резьб как R, а по факту G
                 thread = thread.replace('R', 'G')
@@ -960,5 +960,508 @@ def data_update_kfgxnt01(name, data, num_lines):
             data['value5'] = '2.5'
         elif data['value5'] == '75':
             data['value5'] = '7.5'
+
+    return (num_lines)
+
+
+def data_update_kqxrt02(name, data, num_lines):
+    #value4 - место для БРС, value5 - место для резьбы (если есть)
+    pattern = r"([A-Z]+)(\d{2})-(.+)-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        first_part = str(match.group(1))  # Серия фитинга
+        first_digits = str(match.group(2))  # БРС
+        second_group = str(match.group(3))  # БРС/резьба
+        # Сейчас обработаем резьбовые фитинги
+        substrings = ['01', '02', '03', '04', 'M3', 'M5', 'M6', 'M7']
+        #  Если будет резьба, нужно добавить 1 строчку в таблицу
+        have_thread = contains_any_substring(second_group, substrings)
+        if have_thread:
+            num_lines += 1
+            data['value4'] = str(first_digits).lstrip("0")
+            thread = {
+                '01': 'R1/8',
+                '02': 'R1/4',
+                '03': 'R3/8',
+                '04': 'R1/2',
+                '01S': 'R1/8',
+                '02S': 'R1/4',
+                '03S': 'R3/8',
+                '04S': 'R1/2',
+                'G01': 'G1/8',
+                'G02': 'G1/4',
+                'G03': 'G3/8',
+                'G04': 'G1/2',
+                'M3': 'M3',
+                'M5': 'M5',
+                'M6': 'M6',
+                'M7': 'M7'
+            }.get(second_group, '')
+            if first_part == 'KQLF' or first_part == 'KQF':  # У KQLF/KQF обозначение резьб как R, а по факту G
+                thread = thread.replace('R', 'G')
+            data['value5'] = thread
+
+        # Условия для фитингов БРС
+        if second_group in ['99', '00']:
+            data['value4'] = str(first_digits).lstrip("0")
+
+        # Условия для фитингов БРС с разными выходами
+        if second_group in ['06', '08', '10', '12', '16', '14']:
+            num_lines += 1
+            data['value4'] = str(first_digits).lstrip("0")
+            data['line5'] = data['line4']
+            data['value5'] = str(second_group).lstrip("0")
+
+        # Условие для KQT06-04-XRT02 и подобных, здесь например 04 опознало как резьбу, а это БРС
+        if '06-04' in name:
+            # num_lines += 1 - здесь не увеличиваем кол-во строк, т.к. в 1 цикле зацепило по 04 и увеличило.
+            # Сейчас повторно обрабатываем
+            data['value4'] = str(first_digits).lstrip("0")
+            data['line5'] = data['line4']
+            data['value5'] = str(second_group).lstrip("0")
+    # Обработка KQP
+    pattern = r"KQP-(\d{2})"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        first_digits = str(match.group(1))
+        data['value4'] = str(first_digits).lstrip("0")
+    return (num_lines)
+
+
+def data_update_kq2xrt01(name, data, num_lines):
+    #value4 - место для БРС, value5 - место для резьбы (если есть)
+    pattern = r"KQ2(.+)(\d{2})-(.+)(?:A)?-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        first_part = str(match.group(1))  # Серия фитинга
+        first_digits = str(match.group(2))  # БРС
+        second_group = str(match.group(3))  # БРС/резьба
+        # Сейчас обработаем резьбовые фитинги
+        substrings = ['01', '02', '03', '04', 'M5']
+        #  Если будет резьба, нужно добавить 1 строчку в таблицу
+        have_thread = contains_any_substring(second_group, substrings)
+        if have_thread:
+            num_lines += 1
+            data['value4'] = str(first_digits).lstrip("0")
+            thread = {
+                '01': 'R1/8',
+                '02': 'R1/4',
+                '03': 'R3/8',
+                '04': 'R1/2',
+                'M5': 'M5'
+            }.get(second_group, '')
+            data['value5'] = thread
+
+        # Условия для фитингов БРС
+        if second_group in ['99', '00']:
+            data['value4'] = str(first_digits).lstrip("0")
+
+        # Условия для фитингов БРС с разными выходами
+        if second_group in ['06', '08', '10', '12', '16', '14']:
+            num_lines += 1
+            data['value4'] = str(first_digits).lstrip("0")
+            data['line5'] = data['line4']
+            data['value5'] = str(second_group).lstrip("0")
+
+    # Обработка KQP
+    pattern = r"KQ2P-(\d{2})"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        first_digits = str(match.group(1))
+        data['value4'] = str(first_digits).lstrip("0")
+    return (num_lines)
+
+
+def data_update_kq2uxlc01(name, data, num_lines):
+    #value4 - место для БРС, value5 - место для резьбы (если есть)
+    pattern = r"KQ2(.+)(\d{2})-(.+)-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        first_part = str(match.group(1))  # Серия фитинга
+        first_digits = str(match.group(2))  # БРС
+        second_group = str(match.group(3))  # БРС/резьба
+        # Сейчас обработаем резьбовые фитинги
+        substrings = ['01', '02', '03', '04']
+        #  Если будет резьба, нужно добавить 1 строчку в таблицу
+        have_thread = contains_any_substring(second_group, substrings)
+        if have_thread:
+            num_lines += 1
+            data['value4'] = str(first_digits).lstrip("0")
+            thread = {
+                'U01': 'Uni1/8',
+                'U02': 'Uni1/4',
+                'U03': 'Uni3/8',
+                'U04': 'Uni1/2'
+            }.get(second_group, '')
+            data['value5'] = thread
+
+    return (num_lines)
+
+
+def data_update_kqb2xrt01(name, data, num_lines):
+    #value4 - место для БРС, value5 - место для резьбы (если есть)
+    pattern = r"KQB2(.+)(\d{2})-(.+)-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        first_part = str(match.group(1))  # Серия фитинга
+        first_digits = str(match.group(2))  # БРС
+        second_group = str(match.group(3))  # БРС/резьба
+        # Сейчас обработаем резьбовые фитинги
+        substrings = ['01', '02', '03', '04', 'M5']
+        #  Если будет резьба, нужно добавить 1 строчку в таблицу
+        have_thread = contains_any_substring(second_group, substrings)
+        if have_thread:
+            num_lines += 1
+            data['value4'] = str(first_digits).lstrip("0")
+            thread = {
+                '01': 'R1/8',
+                '02': 'R1/4',
+                '03': 'R3/8',
+                '04': 'R1/2',
+                '01S': 'R1/8',
+                '02S': 'R1/4',
+                '03S': 'R3/8',
+                '04S': 'R1/2',
+                'G01': 'G1/8',
+                'G02': 'G1/4',
+                'G03': 'G3/8',
+                'G04': 'G1/2',
+                'M5': 'M5'
+            }.get(second_group, '')
+            if first_part == 'F':  # У KQB2F обозначение резьб как R, а по факту G
+                thread = thread.replace('R', 'G')
+            data['value5'] = thread
+
+        # Условия для фитингов БРС
+        if second_group in ['99', '00']:
+            data['value4'] = str(first_digits).lstrip("0")
+
+        # Условия для фитингов БРС с разными выходами
+        if second_group in ['06', '08', '10', '12', '16', '14']:
+            num_lines += 1
+            data['value4'] = str(first_digits).lstrip("0")
+            data['line5'] = data['line4']
+            data['value5'] = str(second_group).lstrip("0")
+
+    return (num_lines)
+
+
+def data_update_kqb2xln01(name, data, num_lines):
+    #value4 - место для БРС, value5 - место для резьбы (если есть)
+    pattern = r"KQB2(.+)(\d{2})-(.+)-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        first_part = str(match.group(1))  # Серия фитинга
+        first_digits = str(match.group(2))  # БРС
+        second_group = str(match.group(3))  # БРС/резьба
+        # Сейчас обработаем резьбовые фитинги
+        substrings = ['01', '02', '03', '04', 'M5']
+        #  Если будет резьба, нужно добавить 1 строчку в таблицу
+        have_thread = contains_any_substring(second_group, substrings)
+        if have_thread:
+            num_lines += 1
+            data['value4'] = str(first_digits).lstrip("0")
+            thread = {
+                '01': 'R1/8',
+                '02': 'R1/4',
+                '03': 'R3/8',
+                '04': 'R1/2',
+                '01S': 'R1/8',
+                '02S': 'R1/4',
+                '03S': 'R3/8',
+                '04S': 'R1/2',
+                'G01': 'G1/8',
+                'G02': 'G1/4',
+                'G03': 'G3/8',
+                'G04': 'G1/2',
+                'M5': 'M5'
+            }.get(second_group, '')
+            if first_part == 'F':  # У KQB2F обозначение резьб как R, а по факту G
+                thread = thread.replace('R', 'G')
+            data['value5'] = thread
+
+        # Условия для фитингов БРС
+        if second_group in ['99', '00']:
+            data['value4'] = str(first_digits).lstrip("0")
+
+        # Условия для фитингов БРС с разными выходами
+        if second_group in ['06', '08', '10', '12', '16', '14']:
+            num_lines += 1
+            data['value4'] = str(first_digits).lstrip("0")
+            data['line5'] = data['line4']
+            data['value5'] = str(second_group).lstrip("0")
+
+    return (num_lines)
+
+
+def data_update_kpksxrt01(name, data, num_lines):
+    #value4 - основной параметр
+    pattern = r"K.(.)(\d{2})-XRT01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        first_part = str(match.group(1))  # Серия фитинга
+        first_digits = str(match.group(2))  # типоразмер
+        if first_part == 'M':
+            data['line4'] = 'Резьбовое присоединение'
+            if first_digits == '10':
+                data['value4'] = 'R1/8'
+            elif first_digits == '20':
+                data['value4'] = 'R1/4'
+            elif first_digits == '30':
+                data['value4'] = 'R3/8'
+            elif first_digits == '40':
+                data['value4'] = 'R1/2'
+        elif first_part == 'F':
+            data['line4'] = 'Резьбовое присоединение'
+            if first_digits == '10':
+                data['value4'] = 'G1/8'
+            elif first_digits == '20':
+                data['value4'] = 'G1/4'
+            elif first_digits == '30':
+                data['value4'] = 'Rc3/8'
+            elif first_digits == '40':
+                data['value4'] = 'G1/2'
+        elif first_part == 'H':
+            data['line4'] = 'Диаметр "ёлочки" (мм)'
+            if first_digits == '10':
+                data['value4'] = '7.2'
+            elif first_digits == '20':
+                data['value4'] = '9'
+            elif first_digits == '30':
+                data['value4'] = '11'
+            elif first_digits == '40':
+                data['value4'] = '13.2'
+        elif first_part == 'P':
+            data['line4'] = 'Диаметр трубки (мм)'
+            if first_digits == '10':
+                data['value4'] = '6'
+            elif first_digits == '20':
+                data['value4'] = '8'
+            elif first_digits == '30':
+                data['value4'] = '10'
+            elif first_digits == '40':
+                data['value4'] = '12'
+
+    return (num_lines)
+
+
+def data_update_kskxxrt01(name, data, num_lines):
+    #value4 - место для БРС, value5 - место для резьбы, value6 - скорость вращения
+    pattern = r"K(.)(?:.)(\d{2})-(.+)-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        first_part = str(match.group(1))  # Серия фитинга
+        first_digits = str(match.group(2))  # БРС
+        second_group = str(match.group(3))  # БРС/резьба
+        data['value4'] = str(first_digits).lstrip("0")
+        thread = {
+            '01': 'R1/8',
+            '02': 'R1/4',
+            '03': 'R3/8',
+            '04': 'R1/2',
+            'M5': 'M5',
+            'M6': 'M6'
+        }.get(second_group, '')
+        data['value5'] = thread
+
+        if first_part == 'S':
+            speed = {
+                '04': '500',
+                '06': '500',
+                '08': '400',
+                '10': '300',
+                '12': '250'
+            }.get(first_digits, '')
+        elif first_part == 'X':
+            speed = {
+                '04': '1500',
+                '06': '1200',
+                '08': '1200',
+                '10': '1000',
+                '12': '1000'
+            }.get(first_digits, '')
+        data['value6'] = speed
+
+    return (num_lines)
+
+def data_update_ksxlc01(name, data, num_lines):
+    #value4 - место для БРС, value5 - место для резьбы, value6 - скорость вращения
+    pattern = r"K(.)(?:.)(\d{2})-(.+)-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        first_part = str(match.group(1))  # Серия фитинга
+        first_digits = str(match.group(2))  # БРС
+        second_group = str(match.group(3))  # БРС/резьба
+        data['value4'] = str(first_digits).lstrip("0")
+        thread = {
+            '01S': 'R1/8',
+            '02S': 'R1/4',
+            '03S': 'R3/8',
+            '04S': 'R1/2',
+            'M5': 'M5',
+            'M6': 'M6'
+        }.get(second_group, '')
+        data['value5'] = thread
+
+        if first_part == 'S':
+            speed = {
+                '04': '500',
+                '06': '500',
+                '08': '400',
+                '10': '300',
+                '12': '250',
+                '16': '200'
+            }.get(first_digits, '')
+        data['value6'] = speed
+
+    return (num_lines)
+
+
+def data_update_kcxrt01(name, data, num_lines):
+    #value4 - место для БРС, value5 - место для резьбы (если есть)
+    pattern = r"KC(.)(\d{2})-(.+)-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        first_part = str(match.group(1))  # Серия фитинга
+        first_digits = str(match.group(2))  # БРС
+        second_group = str(match.group(3))  # БРС/резьба
+        # Сейчас обработаем резьбовые фитинги
+        substrings = ['01', '02', '03', '04', 'M5']
+        #  Если будет резьба, нужно добавить 1 строчку в таблицу
+        have_thread = contains_any_substring(second_group, substrings)
+        if have_thread:
+            num_lines += 1
+            data['value4'] = str(first_digits).lstrip("0")
+            thread = {
+                '01': 'R1/8',
+                '02': 'R1/4',
+                '03': 'R3/8',
+                '04': 'R1/2',
+                'M5': 'M5'
+            }.get(second_group, '')
+            data['value5'] = thread
+
+        # Условия для фитингов БРС
+        if second_group in ['00']:
+            data['value4'] = str(first_digits).lstrip("0")
+
+    return (num_lines)
+
+
+def data_update_kprxjc01(name, data, num_lines):
+    #value4/value5 - место для БРС, value6 - место для резьбы (если есть)
+    pattern = r"KPR(?:.*)(\d{2})(\d{2})-(.+)-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        first_digits = str(match.group(1))  # БРС1
+        second_digits = str(match.group(2))  # БРС2
+        second_group = str(match.group(3))  # БРС/резьба
+        # Сейчас обработаем резьбовые фитинги
+        substrings = ['01', '02', '03', '04', 'M5', 'M6']
+        #  Если будет резьба, нужно добавить 1 строчку в таблицу
+        have_thread = contains_any_substring(second_group, substrings)
+        if have_thread:
+            num_lines += 1
+            data['value4'] = str(first_digits).lstrip("0")
+            data['value5'] = str(second_digits).lstrip("0")
+            thread = {
+                '01S': 'R1/8',
+                '02S': 'R1/4',
+                '03S': 'R3/8',
+                '04S': 'R1/2',
+                'F01': 'G1/8',
+                'F02': 'G1/4',
+                'F03': 'G3/8',
+                'F04': 'G1/2',
+                'M5': 'M5',
+                'M6': 'M6'
+            }.get(second_group, '')
+            data['value6'] = thread
+
+        # Условия для фитингов БРС
+        if second_group in ['00']:
+            data['value4'] = str(first_digits).lstrip("0")
+            data['value5'] = str(second_digits).lstrip("0")
+        if second_group in ['NUT']:
+            data['value4'] = str(first_digits).lstrip("0")
+            data['value5'] = str(second_digits).lstrip("0")
+            data['Name_product'] = 'Накидная гайка'
+
+
+        if data['value5'] == '25':
+            data['value5'] = '2.5'
+
+    return (num_lines)
+
+
+def data_update_kfxrt01(name, data, num_lines):
+    #value4/value5 - место для БРС, value6 - место для резьбы (если есть)
+    pattern = r"K.F.(\d{2})-(.+)-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        first_digits = str(match.group(1))  # БРС1
+        second_group = str(match.group(2))  # БРС/резьба
+        # Сейчас обработаем резьбовые фитинги
+        substrings = ['01', '02', '03', '04', 'M5', 'M6']
+        #  Если будет резьба, нужно добавить 1 строчку в таблицу
+        have_thread = contains_any_substring(second_group, substrings)
+        if have_thread:
+            num_lines += 1
+            thread = {
+                '01': 'R1/8',
+                '02': 'R1/4',
+                '03': 'R3/8',
+                '04': 'R1/2'
+            }.get(second_group, '')
+            data['value6'] = thread
+
+        inner_tube = {
+            '04': '2.5',
+            '06': '4',
+            '08': '5',
+            '10': '6.5',
+            '12': '8'
+        }.get(first_digits, '')
+        data['value4'] = str(first_digits).lstrip("0")
+        data['value5'] = inner_tube
+
+    return (num_lines)
+
+def data_update_hdxrt01(name, data, num_lines):
+    #value4, value5 - место для резьбы (если есть)
+    pattern = r"(?:.*)(\d{2})-(.+)-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        first_digits = str(match.group(1))  # БРС
+        second_group = str(match.group(2))  # БРС/резьба
+        # Сейчас обработаем резьбовые фитинги
+        substrings = ['01', '02', '03', '04', 'M5', 'M6']
+        #  Если будет резьба, нужно добавить 1 строчку в таблицу
+        have_thread = contains_any_substring(second_group, substrings)
+        if have_thread:
+            num_lines += 1
+            thread = {
+                '01': 'R1/8',
+                '02': 'R1/4',
+                '03': 'R3/8',
+                '04': 'R1/2'
+            }.get(second_group, '')
+            data['value5'] = thread
+
+        data['value4'] = str(first_digits).lstrip("0")
 
     return (num_lines)

@@ -147,6 +147,20 @@ def run_main_code():
         r'KQG2.*XKV01': 'KQG2_XKV01.txt',
         r'KQG2.*XLN01': 'KQG2_XLN01.txt',
         r'KQG2.*XRT01': 'KQG2_XRT01.txt',
+        r'KQB2.*XRT01': 'KQB2_XRT01.txt',
+        r'KQB2.*XLN01': 'KQB2_XLN01.txt',
+        r'KQ2.*XLC01': 'KQ2_U_XLC01.txt',
+        r'KC.\d{2}-.{2}-XRT01': 'KC_XRT01.txt',
+        r'KS.\d{2}-.{2,3}-XLC01': 'KS_XLC01.txt',
+        r'K.{2}\d{2}-.{2}-XRT01': 'KS_KX_XRT01.txt',
+        r'K.{2}\d{2}-XRT01': 'KP_KS_XRT01.txt',
+        r'^H\d{2}-\d{2}-XRT01': 'H_D_XRT01.txt',
+        r'^D.\d{2}-\d{2}-XRT01': 'H_D_XRT01.txt',
+        r'KQ2.*XRT01': 'KQ2_XRT01.txt',
+        r'KJS.*XRT02': 'KQ_XRT02.txt',
+        r'KQ.*XRT02': 'KQ_XRT02.txt',
+        r'K.F.\d{2}.*XRT01': 'K_F_XRT01.txt',
+        r'KPR.*XJC01': 'KPR_XJC01.txt',
         r'KQ.*XLN01': 'KQ_XLN01.txt',
         r'AW.*XLN01': 'AW_XLN01.txt',
         r'AF.*XLN01': 'AF_XLN01.txt',
@@ -247,6 +261,30 @@ def run_main_code():
         num_lines = data_update_kfgxrt01(name, data, num_lines)
     elif config_name == 'KFG_XNT01.txt':
         num_lines = data_update_kfgxnt01(name, data, num_lines)
+    elif config_name == 'KQ_XRT02.txt':
+        num_lines = data_update_kqxrt02(name, data, num_lines)
+    elif config_name == 'KQ2_XRT01.txt':
+        num_lines = data_update_kq2xrt01(name, data, num_lines)
+    elif config_name == 'KQ2_U_XLC01.txt':
+        num_lines = data_update_kq2uxlc01(name, data, num_lines)
+    elif config_name == 'KQB2_XRT01.txt':
+        num_lines = data_update_kqb2xrt01(name, data, num_lines)
+    elif config_name == 'KQB2_XLN01.txt':
+        num_lines = data_update_kqb2xln01(name, data, num_lines)
+    elif config_name == 'KP_KS_XRT01.txt':
+        num_lines = data_update_kpksxrt01(name, data, num_lines)
+    elif config_name == 'KS_KX_XRT01.txt':
+        num_lines = data_update_kskxxrt01(name, data, num_lines)
+    elif config_name == 'KS_XLC01.txt':
+        num_lines = data_update_ksxlc01(name, data, num_lines)
+    elif config_name == 'KC_XRT01.txt':
+        num_lines = data_update_kcxrt01(name, data, num_lines)
+    elif config_name == 'KPR_XJC01.txt':
+        num_lines = data_update_kprxjc01(name, data, num_lines)
+    elif config_name == 'K_F_XRT01.txt':
+        num_lines = data_update_kfxrt01(name, data, num_lines)
+    elif config_name == 'H_D_XRT01.txt':
+        num_lines = data_update_hdxrt01(name, data, num_lines)
 
 
 
