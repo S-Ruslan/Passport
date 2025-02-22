@@ -1,6 +1,306 @@
 ('C:\\Users\\Safin '
  'Ruslan\\Desktop\\Программирование\\Passport\\pythonProject1\\build\\Passport\\PYZ-00.pyz',
- [('__future__',
+ [('PIL',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\__init__.py',
+   'PYMODULE'),
+  ('PIL.BlpImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\BlpImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.BmpImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\BmpImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.BufrStubImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\BufrStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.CurImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\CurImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.DcxImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\DcxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.DdsImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\DdsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.EpsImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\EpsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ExifTags',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\ExifTags.py',
+   'PYMODULE'),
+  ('PIL.FitsImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\FitsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FliImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\FliImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FpxImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\FpxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FtexImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\FtexImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GbrImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\GbrImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GifImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\GifImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GimpGradientFile',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\GimpGradientFile.py',
+   'PYMODULE'),
+  ('PIL.GimpPaletteFile',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\GimpPaletteFile.py',
+   'PYMODULE'),
+  ('PIL.GribStubImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\GribStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.Hdf5StubImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\Hdf5StubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IcnsImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\IcnsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IcoImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\IcoImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\ImImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.Image',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\Image.py',
+   'PYMODULE'),
+  ('PIL.ImageChops',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\ImageChops.py',
+   'PYMODULE'),
+  ('PIL.ImageCms',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\ImageCms.py',
+   'PYMODULE'),
+  ('PIL.ImageColor',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\ImageColor.py',
+   'PYMODULE'),
+  ('PIL.ImageFile',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\ImageFile.py',
+   'PYMODULE'),
+  ('PIL.ImageFilter',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\ImageFilter.py',
+   'PYMODULE'),
+  ('PIL.ImageMath',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\ImageMath.py',
+   'PYMODULE'),
+  ('PIL.ImageMode',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\ImageMode.py',
+   'PYMODULE'),
+  ('PIL.ImageOps',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\ImageOps.py',
+   'PYMODULE'),
+  ('PIL.ImagePalette',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\ImagePalette.py',
+   'PYMODULE'),
+  ('PIL.ImageQt',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\ImageQt.py',
+   'PYMODULE'),
+  ('PIL.ImageSequence',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\ImageSequence.py',
+   'PYMODULE'),
+  ('PIL.ImageShow',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\ImageShow.py',
+   'PYMODULE'),
+  ('PIL.ImageTk',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\ImageTk.py',
+   'PYMODULE'),
+  ('PIL.ImageWin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\ImageWin.py',
+   'PYMODULE'),
+  ('PIL.ImtImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\ImtImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IptcImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\IptcImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.Jpeg2KImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\Jpeg2KImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.JpegImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\JpegImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.JpegPresets',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\JpegPresets.py',
+   'PYMODULE'),
+  ('PIL.McIdasImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\McIdasImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MicImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\MicImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MpegImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\MpegImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MpoImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\MpoImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MspImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\MspImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PaletteFile',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\PaletteFile.py',
+   'PYMODULE'),
+  ('PIL.PalmImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\PalmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PcdImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\PcdImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PcxImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\PcxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PdfImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\PdfImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PdfParser',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\PdfParser.py',
+   'PYMODULE'),
+  ('PIL.PixarImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\PixarImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PngImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\PngImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PpmImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\PpmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PsdImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\PsdImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.QoiImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\QoiImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SgiImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\SgiImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SpiderImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\SpiderImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SunImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\SunImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.TgaImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\TgaImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.TiffImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\TiffImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.TiffTags',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\TiffTags.py',
+   'PYMODULE'),
+  ('PIL.WebPImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\WebPImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.WmfImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\WmfImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XVThumbImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\XVThumbImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XbmImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\XbmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XpmImagePlugin',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\XpmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL._binary',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\_binary.py',
+   'PYMODULE'),
+  ('PIL._deprecate',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\_deprecate.py',
+   'PYMODULE'),
+  ('PIL._typing',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\_typing.py',
+   'PYMODULE'),
+  ('PIL._util',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\_util.py',
+   'PYMODULE'),
+  ('PIL._version',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\_version.py',
+   'PYMODULE'),
+  ('PIL.features',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\features.py',
+   'PYMODULE'),
+  ('__future__',
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\__future__.py',
    'PYMODULE'),
@@ -35,6 +335,18 @@
   ('_pydecimal',
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\_pydecimal.py',
+   'PYMODULE'),
+  ('_pyi_rth_utils',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\fake-modules\\_pyi_rth_utils\\__init__.py',
+   'PYMODULE'),
+  ('_pyi_rth_utils._win32',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\fake-modules\\_pyi_rth_utils\\_win32.py',
+   'PYMODULE'),
+  ('_pyi_rth_utils.tempfile',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\fake-modules\\_pyi_rth_utils\\tempfile.py',
    'PYMODULE'),
   ('_sitebuiltins',
    'C:\\Users\\Safin '
@@ -248,6 +560,10 @@
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\colorama\\winterm.py',
    'PYMODULE'),
+  ('colorsys',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\colorsys.py',
+   'PYMODULE'),
   ('commctrl',
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\win32\\lib\\commctrl.py',
@@ -284,6 +600,42 @@
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\contextvars.py',
    'PYMODULE'),
+  ('contourpy',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\contourpy\\__init__.py',
+   'PYMODULE'),
+  ('contourpy._version',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\contourpy\\_version.py',
+   'PYMODULE'),
+  ('contourpy.array',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\contourpy\\array.py',
+   'PYMODULE'),
+  ('contourpy.chunk',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\contourpy\\chunk.py',
+   'PYMODULE'),
+  ('contourpy.convert',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\contourpy\\convert.py',
+   'PYMODULE'),
+  ('contourpy.dechunk',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\contourpy\\dechunk.py',
+   'PYMODULE'),
+  ('contourpy.enum_util',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\contourpy\\enum_util.py',
+   'PYMODULE'),
+  ('contourpy.typecheck',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\contourpy\\typecheck.py',
+   'PYMODULE'),
+  ('contourpy.types',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\contourpy\\types.py',
+   'PYMODULE'),
   ('copy',
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\copy.py',
@@ -304,6 +656,10 @@
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\ctypes\\wintypes.py',
    'PYMODULE'),
+  ('cycler',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\cycler\\__init__.py',
+   'PYMODULE'),
   ('data_update',
    'C:\\Users\\Safin '
    'Ruslan\\Desktop\\Программирование\\Passport\\pythonProject1\\data_update.py',
@@ -315,6 +671,66 @@
   ('datetime',
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\datetime.py',
+   'PYMODULE'),
+  ('dateutil',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\dateutil\\__init__.py',
+   'PYMODULE'),
+  ('dateutil._common',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\dateutil\\_common.py',
+   'PYMODULE'),
+  ('dateutil._version',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\dateutil\\_version.py',
+   'PYMODULE'),
+  ('dateutil.easter',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\dateutil\\easter.py',
+   'PYMODULE'),
+  ('dateutil.parser',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\dateutil\\parser\\__init__.py',
+   'PYMODULE'),
+  ('dateutil.parser._parser',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\dateutil\\parser\\_parser.py',
+   'PYMODULE'),
+  ('dateutil.parser.isoparser',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\dateutil\\parser\\isoparser.py',
+   'PYMODULE'),
+  ('dateutil.relativedelta',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\dateutil\\relativedelta.py',
+   'PYMODULE'),
+  ('dateutil.rrule',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\dateutil\\rrule.py',
+   'PYMODULE'),
+  ('dateutil.tz',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\dateutil\\tz\\__init__.py',
+   'PYMODULE'),
+  ('dateutil.tz._common',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\dateutil\\tz\\_common.py',
+   'PYMODULE'),
+  ('dateutil.tz._factories',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\dateutil\\tz\\_factories.py',
+   'PYMODULE'),
+  ('dateutil.tz.tz',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\dateutil\\tz\\tz.py',
+   'PYMODULE'),
+  ('dateutil.tz.win',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\dateutil\\tz\\win.py',
+   'PYMODULE'),
+  ('dateutil.zoneinfo',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\dateutil\\zoneinfo\\__init__.py',
    'PYMODULE'),
   ('decimal',
    'C:\\Users\\Safin '
@@ -784,6 +1200,10 @@
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\email\\utils.py',
    'PYMODULE'),
+  ('fileinput',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\fileinput.py',
+   'PYMODULE'),
   ('fnmatch',
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\fnmatch.py',
@@ -961,6 +1381,14 @@
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\json\\scanner.py',
    'PYMODULE'),
+  ('kiwisolver',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\kiwisolver\\__init__.py',
+   'PYMODULE'),
+  ('kiwisolver.exceptions',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\kiwisolver\\exceptions.py',
+   'PYMODULE'),
   ('logging',
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\logging\\__init__.py',
@@ -1065,9 +1493,418 @@
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\lzma.py',
    'PYMODULE'),
+  ('matplotlib',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\__init__.py',
+   'PYMODULE'),
+  ('matplotlib._afm',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_afm.py',
+   'PYMODULE'),
+  ('matplotlib._api',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_api\\__init__.py',
+   'PYMODULE'),
+  ('matplotlib._api.deprecation',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_api\\deprecation.py',
+   'PYMODULE'),
+  ('matplotlib._blocking_input',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_blocking_input.py',
+   'PYMODULE'),
+  ('matplotlib._cm',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_cm.py',
+   'PYMODULE'),
+  ('matplotlib._cm_bivar',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_cm_bivar.py',
+   'PYMODULE'),
+  ('matplotlib._cm_listed',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_cm_listed.py',
+   'PYMODULE'),
+  ('matplotlib._cm_multivar',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_cm_multivar.py',
+   'PYMODULE'),
+  ('matplotlib._color_data',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_color_data.py',
+   'PYMODULE'),
+  ('matplotlib._constrained_layout',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_constrained_layout.py',
+   'PYMODULE'),
+  ('matplotlib._docstring',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_docstring.py',
+   'PYMODULE'),
+  ('matplotlib._enums',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_enums.py',
+   'PYMODULE'),
+  ('matplotlib._fontconfig_pattern',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_fontconfig_pattern.py',
+   'PYMODULE'),
+  ('matplotlib._layoutgrid',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_layoutgrid.py',
+   'PYMODULE'),
+  ('matplotlib._mathtext',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_mathtext.py',
+   'PYMODULE'),
+  ('matplotlib._mathtext_data',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_mathtext_data.py',
+   'PYMODULE'),
+  ('matplotlib._pylab_helpers',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_pylab_helpers.py',
+   'PYMODULE'),
+  ('matplotlib._text_helpers',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_text_helpers.py',
+   'PYMODULE'),
+  ('matplotlib._tight_bbox',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_tight_bbox.py',
+   'PYMODULE'),
+  ('matplotlib._tight_layout',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_tight_layout.py',
+   'PYMODULE'),
+  ('matplotlib._version',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\_version.py',
+   'PYMODULE'),
+  ('matplotlib.artist',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\artist.py',
+   'PYMODULE'),
+  ('matplotlib.axes',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\axes\\__init__.py',
+   'PYMODULE'),
+  ('matplotlib.axes._axes',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\axes\\_axes.py',
+   'PYMODULE'),
+  ('matplotlib.axes._base',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\axes\\_base.py',
+   'PYMODULE'),
+  ('matplotlib.axes._secondary_axes',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\axes\\_secondary_axes.py',
+   'PYMODULE'),
+  ('matplotlib.axis',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\axis.py',
+   'PYMODULE'),
+  ('matplotlib.backend_bases',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\backend_bases.py',
+   'PYMODULE'),
+  ('matplotlib.backend_managers',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\backend_managers.py',
+   'PYMODULE'),
+  ('matplotlib.backend_tools',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\backend_tools.py',
+   'PYMODULE'),
+  ('matplotlib.backends',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\backends\\__init__.py',
+   'PYMODULE'),
+  ('matplotlib.backends._backend_tk',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\backends\\_backend_tk.py',
+   'PYMODULE'),
+  ('matplotlib.backends.backend_agg',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\backends\\backend_agg.py',
+   'PYMODULE'),
+  ('matplotlib.backends.backend_tkagg',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\backends\\backend_tkagg.py',
+   'PYMODULE'),
+  ('matplotlib.backends.backend_webagg',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\backends\\backend_webagg.py',
+   'PYMODULE'),
+  ('matplotlib.backends.backend_webagg_core',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\backends\\backend_webagg_core.py',
+   'PYMODULE'),
+  ('matplotlib.backends.registry',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\backends\\registry.py',
+   'PYMODULE'),
+  ('matplotlib.bezier',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\bezier.py',
+   'PYMODULE'),
+  ('matplotlib.category',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\category.py',
+   'PYMODULE'),
+  ('matplotlib.cbook',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\cbook.py',
+   'PYMODULE'),
+  ('matplotlib.cm',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\cm.py',
+   'PYMODULE'),
+  ('matplotlib.collections',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\collections.py',
+   'PYMODULE'),
+  ('matplotlib.colorbar',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\colorbar.py',
+   'PYMODULE'),
+  ('matplotlib.colorizer',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\colorizer.py',
+   'PYMODULE'),
+  ('matplotlib.colors',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\colors.py',
+   'PYMODULE'),
+  ('matplotlib.container',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\container.py',
+   'PYMODULE'),
+  ('matplotlib.contour',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\contour.py',
+   'PYMODULE'),
+  ('matplotlib.dates',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\dates.py',
+   'PYMODULE'),
+  ('matplotlib.dviread',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\dviread.py',
+   'PYMODULE'),
+  ('matplotlib.figure',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\figure.py',
+   'PYMODULE'),
+  ('matplotlib.font_manager',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\font_manager.py',
+   'PYMODULE'),
+  ('matplotlib.gridspec',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\gridspec.py',
+   'PYMODULE'),
+  ('matplotlib.hatch',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\hatch.py',
+   'PYMODULE'),
+  ('matplotlib.image',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\image.py',
+   'PYMODULE'),
+  ('matplotlib.inset',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\inset.py',
+   'PYMODULE'),
+  ('matplotlib.layout_engine',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\layout_engine.py',
+   'PYMODULE'),
+  ('matplotlib.legend',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\legend.py',
+   'PYMODULE'),
+  ('matplotlib.legend_handler',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\legend_handler.py',
+   'PYMODULE'),
+  ('matplotlib.lines',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\lines.py',
+   'PYMODULE'),
+  ('matplotlib.markers',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\markers.py',
+   'PYMODULE'),
+  ('matplotlib.mathtext',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\mathtext.py',
+   'PYMODULE'),
+  ('matplotlib.mlab',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\mlab.py',
+   'PYMODULE'),
+  ('matplotlib.offsetbox',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\offsetbox.py',
+   'PYMODULE'),
+  ('matplotlib.patches',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\patches.py',
+   'PYMODULE'),
+  ('matplotlib.path',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\path.py',
+   'PYMODULE'),
+  ('matplotlib.patheffects',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\patheffects.py',
+   'PYMODULE'),
+  ('matplotlib.projections',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\projections\\__init__.py',
+   'PYMODULE'),
+  ('matplotlib.projections.geo',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\projections\\geo.py',
+   'PYMODULE'),
+  ('matplotlib.projections.polar',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\projections\\polar.py',
+   'PYMODULE'),
+  ('matplotlib.pyplot',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\pyplot.py',
+   'PYMODULE'),
+  ('matplotlib.quiver',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\quiver.py',
+   'PYMODULE'),
+  ('matplotlib.rcsetup',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\rcsetup.py',
+   'PYMODULE'),
+  ('matplotlib.scale',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\scale.py',
+   'PYMODULE'),
+  ('matplotlib.spines',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\spines.py',
+   'PYMODULE'),
+  ('matplotlib.stackplot',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\stackplot.py',
+   'PYMODULE'),
+  ('matplotlib.streamplot',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\streamplot.py',
+   'PYMODULE'),
+  ('matplotlib.style',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\style\\__init__.py',
+   'PYMODULE'),
+  ('matplotlib.style.core',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\style\\core.py',
+   'PYMODULE'),
+  ('matplotlib.table',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\table.py',
+   'PYMODULE'),
+  ('matplotlib.texmanager',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\texmanager.py',
+   'PYMODULE'),
+  ('matplotlib.text',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\text.py',
+   'PYMODULE'),
+  ('matplotlib.textpath',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\textpath.py',
+   'PYMODULE'),
+  ('matplotlib.ticker',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\ticker.py',
+   'PYMODULE'),
+  ('matplotlib.transforms',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\transforms.py',
+   'PYMODULE'),
+  ('matplotlib.tri',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\tri\\__init__.py',
+   'PYMODULE'),
+  ('matplotlib.tri._triangulation',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\tri\\_triangulation.py',
+   'PYMODULE'),
+  ('matplotlib.tri._tricontour',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\tri\\_tricontour.py',
+   'PYMODULE'),
+  ('matplotlib.tri._trifinder',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\tri\\_trifinder.py',
+   'PYMODULE'),
+  ('matplotlib.tri._triinterpolate',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\tri\\_triinterpolate.py',
+   'PYMODULE'),
+  ('matplotlib.tri._tripcolor',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\tri\\_tripcolor.py',
+   'PYMODULE'),
+  ('matplotlib.tri._triplot',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\tri\\_triplot.py',
+   'PYMODULE'),
+  ('matplotlib.tri._trirefine',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\tri\\_trirefine.py',
+   'PYMODULE'),
+  ('matplotlib.tri._tritools',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\tri\\_tritools.py',
+   'PYMODULE'),
+  ('matplotlib.typing',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\typing.py',
+   'PYMODULE'),
+  ('matplotlib.units',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\units.py',
+   'PYMODULE'),
+  ('matplotlib.widgets',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\widgets.py',
+   'PYMODULE'),
   ('mimetypes',
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\mimetypes.py',
+   'PYMODULE'),
+  ('mpl_toolkits', '-', 'PYMODULE'),
+  ('mpl_toolkits.mplot3d',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\mpl_toolkits\\mplot3d\\__init__.py',
+   'PYMODULE'),
+  ('mpl_toolkits.mplot3d.art3d',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\mpl_toolkits\\mplot3d\\art3d.py',
+   'PYMODULE'),
+  ('mpl_toolkits.mplot3d.axes3d',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\mpl_toolkits\\mplot3d\\axes3d.py',
+   'PYMODULE'),
+  ('mpl_toolkits.mplot3d.axis3d',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\mpl_toolkits\\mplot3d\\axis3d.py',
+   'PYMODULE'),
+  ('mpl_toolkits.mplot3d.proj3d',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\mpl_toolkits\\mplot3d\\proj3d.py',
    'PYMODULE'),
   ('multiprocessing',
    'C:\\Users\\Safin '
@@ -1172,6 +2009,567 @@
   ('numbers',
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\numbers.py',
+   'PYMODULE'),
+  ('numpy',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\__init__.py',
+   'PYMODULE'),
+  ('numpy.__config__',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\__config__.py',
+   'PYMODULE'),
+  ('numpy._array_api_info',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_array_api_info.py',
+   'PYMODULE'),
+  ('numpy._core',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\__init__.py',
+   'PYMODULE'),
+  ('numpy._core._add_newdocs',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\_add_newdocs.py',
+   'PYMODULE'),
+  ('numpy._core._add_newdocs_scalars',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\_add_newdocs_scalars.py',
+   'PYMODULE'),
+  ('numpy._core._asarray',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\_asarray.py',
+   'PYMODULE'),
+  ('numpy._core._dtype',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\_dtype.py',
+   'PYMODULE'),
+  ('numpy._core._dtype_ctypes',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\_dtype_ctypes.py',
+   'PYMODULE'),
+  ('numpy._core._exceptions',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\_exceptions.py',
+   'PYMODULE'),
+  ('numpy._core._internal',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\_internal.py',
+   'PYMODULE'),
+  ('numpy._core._machar',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\_machar.py',
+   'PYMODULE'),
+  ('numpy._core._methods',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\_methods.py',
+   'PYMODULE'),
+  ('numpy._core._string_helpers',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\_string_helpers.py',
+   'PYMODULE'),
+  ('numpy._core._type_aliases',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\_type_aliases.py',
+   'PYMODULE'),
+  ('numpy._core._ufunc_config',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\_ufunc_config.py',
+   'PYMODULE'),
+  ('numpy._core.arrayprint',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\arrayprint.py',
+   'PYMODULE'),
+  ('numpy._core.defchararray',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\defchararray.py',
+   'PYMODULE'),
+  ('numpy._core.einsumfunc',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\einsumfunc.py',
+   'PYMODULE'),
+  ('numpy._core.fromnumeric',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py',
+   'PYMODULE'),
+  ('numpy._core.function_base',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\function_base.py',
+   'PYMODULE'),
+  ('numpy._core.getlimits',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\getlimits.py',
+   'PYMODULE'),
+  ('numpy._core.memmap',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\memmap.py',
+   'PYMODULE'),
+  ('numpy._core.multiarray',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\multiarray.py',
+   'PYMODULE'),
+  ('numpy._core.numeric',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\numeric.py',
+   'PYMODULE'),
+  ('numpy._core.numerictypes',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\numerictypes.py',
+   'PYMODULE'),
+  ('numpy._core.overrides',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\overrides.py',
+   'PYMODULE'),
+  ('numpy._core.printoptions',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\printoptions.py',
+   'PYMODULE'),
+  ('numpy._core.records',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\records.py',
+   'PYMODULE'),
+  ('numpy._core.shape_base',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\shape_base.py',
+   'PYMODULE'),
+  ('numpy._core.strings',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\strings.py',
+   'PYMODULE'),
+  ('numpy._core.tests', '-', 'PYMODULE'),
+  ('numpy._core.tests._natype',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\tests\\_natype.py',
+   'PYMODULE'),
+  ('numpy._core.umath',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_core\\umath.py',
+   'PYMODULE'),
+  ('numpy._distributor_init',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_distributor_init.py',
+   'PYMODULE'),
+  ('numpy._expired_attrs_2_0',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_expired_attrs_2_0.py',
+   'PYMODULE'),
+  ('numpy._globals',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_globals.py',
+   'PYMODULE'),
+  ('numpy._pytesttester',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_pytesttester.py',
+   'PYMODULE'),
+  ('numpy._typing',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_typing\\__init__.py',
+   'PYMODULE'),
+  ('numpy._typing._add_docstring',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_typing\\_add_docstring.py',
+   'PYMODULE'),
+  ('numpy._typing._array_like',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_typing\\_array_like.py',
+   'PYMODULE'),
+  ('numpy._typing._char_codes',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_typing\\_char_codes.py',
+   'PYMODULE'),
+  ('numpy._typing._dtype_like',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_typing\\_dtype_like.py',
+   'PYMODULE'),
+  ('numpy._typing._nbit',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_typing\\_nbit.py',
+   'PYMODULE'),
+  ('numpy._typing._nbit_base',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_typing\\_nbit_base.py',
+   'PYMODULE'),
+  ('numpy._typing._nested_sequence',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_typing\\_nested_sequence.py',
+   'PYMODULE'),
+  ('numpy._typing._scalars',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_typing\\_scalars.py',
+   'PYMODULE'),
+  ('numpy._typing._shape',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_typing\\_shape.py',
+   'PYMODULE'),
+  ('numpy._typing._ufunc',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_typing\\_ufunc.py',
+   'PYMODULE'),
+  ('numpy._utils',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_utils\\__init__.py',
+   'PYMODULE'),
+  ('numpy._utils._convertions',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_utils\\_convertions.py',
+   'PYMODULE'),
+  ('numpy._utils._inspect',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\_utils\\_inspect.py',
+   'PYMODULE'),
+  ('numpy.char',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\char\\__init__.py',
+   'PYMODULE'),
+  ('numpy.core',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\core\\__init__.py',
+   'PYMODULE'),
+  ('numpy.core._utils',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\core\\_utils.py',
+   'PYMODULE'),
+  ('numpy.ctypeslib',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\ctypeslib.py',
+   'PYMODULE'),
+  ('numpy.dtypes',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\dtypes.py',
+   'PYMODULE'),
+  ('numpy.exceptions',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\exceptions.py',
+   'PYMODULE'),
+  ('numpy.f2py',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\__init__.py',
+   'PYMODULE'),
+  ('numpy.f2py.__version__',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\__version__.py',
+   'PYMODULE'),
+  ('numpy.f2py._backends',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\_backends\\__init__.py',
+   'PYMODULE'),
+  ('numpy.f2py._backends._backend',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\_backends\\_backend.py',
+   'PYMODULE'),
+  ('numpy.f2py._backends._distutils',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\_backends\\_distutils.py',
+   'PYMODULE'),
+  ('numpy.f2py._backends._meson',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\_backends\\_meson.py',
+   'PYMODULE'),
+  ('numpy.f2py._isocbind',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\_isocbind.py',
+   'PYMODULE'),
+  ('numpy.f2py.auxfuncs',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\auxfuncs.py',
+   'PYMODULE'),
+  ('numpy.f2py.capi_maps',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\capi_maps.py',
+   'PYMODULE'),
+  ('numpy.f2py.cb_rules',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\cb_rules.py',
+   'PYMODULE'),
+  ('numpy.f2py.cfuncs',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\cfuncs.py',
+   'PYMODULE'),
+  ('numpy.f2py.common_rules',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\common_rules.py',
+   'PYMODULE'),
+  ('numpy.f2py.crackfortran',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\crackfortran.py',
+   'PYMODULE'),
+  ('numpy.f2py.diagnose',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\diagnose.py',
+   'PYMODULE'),
+  ('numpy.f2py.f2py2e',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\f2py2e.py',
+   'PYMODULE'),
+  ('numpy.f2py.f90mod_rules',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\f90mod_rules.py',
+   'PYMODULE'),
+  ('numpy.f2py.func2subr',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\func2subr.py',
+   'PYMODULE'),
+  ('numpy.f2py.rules',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\rules.py',
+   'PYMODULE'),
+  ('numpy.f2py.symbolic',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\symbolic.py',
+   'PYMODULE'),
+  ('numpy.f2py.use_rules',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\f2py\\use_rules.py',
+   'PYMODULE'),
+  ('numpy.fft',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\fft\\__init__.py',
+   'PYMODULE'),
+  ('numpy.fft._helper',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\fft\\_helper.py',
+   'PYMODULE'),
+  ('numpy.fft._pocketfft',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\fft\\_pocketfft.py',
+   'PYMODULE'),
+  ('numpy.fft.helper',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\fft\\helper.py',
+   'PYMODULE'),
+  ('numpy.lib',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\__init__.py',
+   'PYMODULE'),
+  ('numpy.lib._array_utils_impl',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_array_utils_impl.py',
+   'PYMODULE'),
+  ('numpy.lib._arraypad_impl',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_arraypad_impl.py',
+   'PYMODULE'),
+  ('numpy.lib._arraysetops_impl',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_arraysetops_impl.py',
+   'PYMODULE'),
+  ('numpy.lib._arrayterator_impl',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_arrayterator_impl.py',
+   'PYMODULE'),
+  ('numpy.lib._datasource',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_datasource.py',
+   'PYMODULE'),
+  ('numpy.lib._function_base_impl',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_function_base_impl.py',
+   'PYMODULE'),
+  ('numpy.lib._histograms_impl',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_histograms_impl.py',
+   'PYMODULE'),
+  ('numpy.lib._index_tricks_impl',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_index_tricks_impl.py',
+   'PYMODULE'),
+  ('numpy.lib._iotools',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_iotools.py',
+   'PYMODULE'),
+  ('numpy.lib._nanfunctions_impl',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_nanfunctions_impl.py',
+   'PYMODULE'),
+  ('numpy.lib._npyio_impl',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_npyio_impl.py',
+   'PYMODULE'),
+  ('numpy.lib._polynomial_impl',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_polynomial_impl.py',
+   'PYMODULE'),
+  ('numpy.lib._scimath_impl',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_scimath_impl.py',
+   'PYMODULE'),
+  ('numpy.lib._shape_base_impl',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_shape_base_impl.py',
+   'PYMODULE'),
+  ('numpy.lib._stride_tricks_impl',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_stride_tricks_impl.py',
+   'PYMODULE'),
+  ('numpy.lib._twodim_base_impl',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_twodim_base_impl.py',
+   'PYMODULE'),
+  ('numpy.lib._type_check_impl',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_type_check_impl.py',
+   'PYMODULE'),
+  ('numpy.lib._ufunclike_impl',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_ufunclike_impl.py',
+   'PYMODULE'),
+  ('numpy.lib._utils_impl',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_utils_impl.py',
+   'PYMODULE'),
+  ('numpy.lib._version',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\_version.py',
+   'PYMODULE'),
+  ('numpy.lib.array_utils',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\array_utils.py',
+   'PYMODULE'),
+  ('numpy.lib.format',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\format.py',
+   'PYMODULE'),
+  ('numpy.lib.introspect',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\introspect.py',
+   'PYMODULE'),
+  ('numpy.lib.mixins',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\mixins.py',
+   'PYMODULE'),
+  ('numpy.lib.npyio',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\npyio.py',
+   'PYMODULE'),
+  ('numpy.lib.recfunctions',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\recfunctions.py',
+   'PYMODULE'),
+  ('numpy.lib.scimath',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\scimath.py',
+   'PYMODULE'),
+  ('numpy.lib.stride_tricks',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\stride_tricks.py',
+   'PYMODULE'),
+  ('numpy.linalg',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\linalg\\__init__.py',
+   'PYMODULE'),
+  ('numpy.linalg._linalg',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\linalg\\_linalg.py',
+   'PYMODULE'),
+  ('numpy.linalg.linalg',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\linalg\\linalg.py',
+   'PYMODULE'),
+  ('numpy.ma',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\ma\\__init__.py',
+   'PYMODULE'),
+  ('numpy.ma.core',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\ma\\core.py',
+   'PYMODULE'),
+  ('numpy.ma.extras',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\ma\\extras.py',
+   'PYMODULE'),
+  ('numpy.ma.mrecords',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\ma\\mrecords.py',
+   'PYMODULE'),
+  ('numpy.matlib',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\matlib.py',
+   'PYMODULE'),
+  ('numpy.matrixlib',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\matrixlib\\__init__.py',
+   'PYMODULE'),
+  ('numpy.matrixlib.defmatrix',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\matrixlib\\defmatrix.py',
+   'PYMODULE'),
+  ('numpy.polynomial',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\polynomial\\__init__.py',
+   'PYMODULE'),
+  ('numpy.polynomial._polybase',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\polynomial\\_polybase.py',
+   'PYMODULE'),
+  ('numpy.polynomial.chebyshev',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\polynomial\\chebyshev.py',
+   'PYMODULE'),
+  ('numpy.polynomial.hermite',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\polynomial\\hermite.py',
+   'PYMODULE'),
+  ('numpy.polynomial.hermite_e',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\polynomial\\hermite_e.py',
+   'PYMODULE'),
+  ('numpy.polynomial.laguerre',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\polynomial\\laguerre.py',
+   'PYMODULE'),
+  ('numpy.polynomial.legendre',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\polynomial\\legendre.py',
+   'PYMODULE'),
+  ('numpy.polynomial.polynomial',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\polynomial\\polynomial.py',
+   'PYMODULE'),
+  ('numpy.polynomial.polyutils',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\polynomial\\polyutils.py',
+   'PYMODULE'),
+  ('numpy.random',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\random\\__init__.py',
+   'PYMODULE'),
+  ('numpy.random._pickle',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\random\\_pickle.py',
+   'PYMODULE'),
+  ('numpy.rec',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\rec\\__init__.py',
+   'PYMODULE'),
+  ('numpy.strings',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\strings\\__init__.py',
+   'PYMODULE'),
+  ('numpy.testing',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\testing\\__init__.py',
+   'PYMODULE'),
+  ('numpy.testing._private',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\testing\\_private\\__init__.py',
+   'PYMODULE'),
+  ('numpy.testing._private.extbuild',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\testing\\_private\\extbuild.py',
+   'PYMODULE'),
+  ('numpy.testing._private.utils',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\testing\\_private\\utils.py',
+   'PYMODULE'),
+  ('numpy.testing.overrides',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\testing\\overrides.py',
+   'PYMODULE'),
+  ('numpy.typing',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\typing\\__init__.py',
+   'PYMODULE'),
+  ('numpy.version',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\version.py',
    'PYMODULE'),
   ('opcode',
    'C:\\Users\\Safin '
@@ -1292,6 +2690,50 @@
   ('pydoc_data.topics',
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\pydoc_data\\topics.py',
+   'PYMODULE'),
+  ('pyparsing',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pyparsing\\__init__.py',
+   'PYMODULE'),
+  ('pyparsing.actions',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pyparsing\\actions.py',
+   'PYMODULE'),
+  ('pyparsing.common',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pyparsing\\common.py',
+   'PYMODULE'),
+  ('pyparsing.core',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pyparsing\\core.py',
+   'PYMODULE'),
+  ('pyparsing.diagram',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pyparsing\\diagram\\__init__.py',
+   'PYMODULE'),
+  ('pyparsing.exceptions',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pyparsing\\exceptions.py',
+   'PYMODULE'),
+  ('pyparsing.helpers',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pyparsing\\helpers.py',
+   'PYMODULE'),
+  ('pyparsing.results',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pyparsing\\results.py',
+   'PYMODULE'),
+  ('pyparsing.testing',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pyparsing\\testing.py',
+   'PYMODULE'),
+  ('pyparsing.unicode',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pyparsing\\unicode.py',
+   'PYMODULE'),
+  ('pyparsing.util',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pyparsing\\util.py',
    'PYMODULE'),
   ('pythoncom',
    'C:\\Users\\Safin '
@@ -2004,6 +3446,10 @@
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site.py',
    'PYMODULE'),
+  ('six',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\six.py',
+   'PYMODULE'),
   ('socket',
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\socket.py',
@@ -2056,9 +3502,33 @@
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\tkinter\\__init__.py',
    'PYMODULE'),
+  ('tkinter.commondialog',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\tkinter\\commondialog.py',
+   'PYMODULE'),
   ('tkinter.constants',
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\tkinter\\constants.py',
+   'PYMODULE'),
+  ('tkinter.dialog',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\tkinter\\dialog.py',
+   'PYMODULE'),
+  ('tkinter.filedialog',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\tkinter\\filedialog.py',
+   'PYMODULE'),
+  ('tkinter.font',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\tkinter\\font.py',
+   'PYMODULE'),
+  ('tkinter.messagebox',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\tkinter\\messagebox.py',
+   'PYMODULE'),
+  ('tkinter.simpledialog',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\tkinter\\simpledialog.py',
    'PYMODULE'),
   ('token',
    'C:\\Users\\Safin '
@@ -2220,6 +3690,10 @@
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\urllib\\response.py',
    'PYMODULE'),
+  ('uuid',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\uuid.py',
+   'PYMODULE'),
   ('webbrowser',
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\webbrowser.py',
@@ -2307,6 +3781,26 @@
   ('xml',
    'C:\\Users\\Safin '
    'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\xml\\__init__.py',
+   'PYMODULE'),
+  ('xml.etree',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\xml\\etree\\__init__.py',
+   'PYMODULE'),
+  ('xml.etree.ElementInclude',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\xml\\etree\\ElementInclude.py',
+   'PYMODULE'),
+  ('xml.etree.ElementPath',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\xml\\etree\\ElementPath.py',
+   'PYMODULE'),
+  ('xml.etree.ElementTree',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\xml\\etree\\ElementTree.py',
+   'PYMODULE'),
+  ('xml.etree.cElementTree',
+   'C:\\Users\\Safin '
+   'Ruslan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\xml\\etree\\cElementTree.py',
    'PYMODULE'),
   ('xml.parsers',
    'C:\\Users\\Safin '

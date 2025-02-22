@@ -162,12 +162,25 @@ def run_main_code():
         r'K.F.\d{2}.*XRT01': 'K_F_XRT01.txt',
         r'KPR.*XJC01': 'KPR_XJC01.txt',
         r'KQ.*XLN01': 'KQ_XLN01.txt',
-        r'AW.*XLN01': 'AW_XLN01.txt',
-        r'AF.*XLN01': 'AF_XLN01.txt',
-        r'AR.*XLN01': 'AR_XLN01.txt',
-        r'AL.*XLN01': 'AL_XLN01.txt',
-        r'VHS.*XLN01': 'VHS_XLN01.txt',
-        r'AC.*XLN01': 'AC_XLN01.txt',
+        r'AW\d{4}.*XLN01': 'AW_XLN01.txt',
+        r'AF\d{4}.*XLN01': 'AF_XLN01.txt',
+        r'AR\d{4}.*XLN01': 'AR_XLN01.txt',
+        r'AL\d{4}.*XLN01': 'AL_XLN01.txt',
+        r'VHS\d{4}.*XLN01': 'VHS_XLN01.txt',
+        r'AC\d{4}.*XLN01': 'AC_XLN01.txt',
+        r'AW\d{4}.*XRT01': 'AW_XRT01.txt',
+        r'AF\d{4}.*XRT01': 'AF_XRT01.txt',
+        r'AR\d{4}.*XRT01': 'AR_XRT01.txt',
+        r'AL\d{4}.*XRT01': 'AL_XRT01.txt',
+        r'VHS\d{4}.*XRT01': 'VHS_XRT01.txt',
+        r'AC\d{4}.*XRT01': 'AC_XRT01.txt',
+        r'AW\d{4}.*X425-XNT01': 'AW_X425_XNT01.txt',
+        r'AF\d{4}.*X425-XNT01': 'AF_X425_XNT01.txt',
+        r'AR\d{4}.*X425-XNT01': 'AR_X425_XNT01.txt',
+        r'AFH\d{4}.*XLN01': 'AFH_XLN01.txt',
+        r'AFH\d{4}.*XNT01': 'AFH_XNT01.txt',
+        r'AFM\d{2}.*XKV01': 'AFM_XKV01.txt',
+        r'AFD\d{2}.*XKV01': 'AFD_XKV01.txt',
         r'AMG\d{3}.*XKV01': 'AMG_XKV01.txt',
         r'AFF.*XKV01': 'AFF_XKV01.txt',
         r'AM\d{3}.*XKV01': 'AM_XKV01.txt',
@@ -233,6 +246,32 @@ def run_main_code():
         num_lines = data_update_vhsxln01(name, data, num_lines)
     elif config_name == 'AC_XLN01.txt':
         num_lines = data_update_acxln01(name, data, num_lines)
+    elif config_name == 'AW_XRT01.txt':
+        num_lines = data_update_awxrt01(name, data, num_lines)
+    elif config_name == 'AF_XRT01.txt':
+        num_lines = data_update_afxrt01(name, data, num_lines)
+    elif config_name == 'AR_XRT01.txt':
+        num_lines = data_update_arxrt01(name, data, num_lines)
+    elif config_name == 'AL_XRT01.txt':
+        num_lines = data_update_alxrt01(name, data, num_lines)
+    elif config_name == 'VHS_XRT01.txt':
+        num_lines = data_update_vhsxrt01(name, data, num_lines)
+    elif config_name == 'AC_XRT01.txt':
+        num_lines = data_update_acxrt01(name, data, num_lines)
+    elif config_name == 'AFM_XKV01.txt':
+        num_lines = data_update_afmxkv01(name, data, num_lines)
+    elif config_name == 'AFD_XKV01.txt':
+        num_lines = data_update_afdxkv01(name, data, num_lines)
+    elif config_name == 'AW_X425_XNT01.txt':
+        num_lines = data_update_awx425xnt01(name, data, num_lines)
+    elif config_name == 'AF_X425_XNT01.txt':
+        num_lines = data_update_afx425xnt01(name, data, num_lines)
+    elif config_name == 'AR_X425_XNT01.txt':
+        num_lines = data_update_arx425xnt01(name, data, num_lines)
+    elif config_name == 'AFH_XLN01.txt':
+        num_lines = data_update_afhxln01(name, data, num_lines)
+    elif config_name == 'AFH_XNT01.txt':
+        num_lines = data_update_afhxnt01(name, data, num_lines)
     elif config_name == 'AMG_XKV01.txt':
         num_lines = data_update_amgxkv01(name, data, num_lines)
     elif config_name == 'AFF_XKV01.txt':
