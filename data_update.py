@@ -51,6 +51,12 @@ thread_not_fittings = {
                 'F10': 'G1',
                 'F14': 'G1 1/2',
                 'F20': 'G2',
+                'N01': 'NPT1/8',
+                'N02': 'NPT1/4',
+                'N03': 'NPT3/8',
+                'N04': 'NPT1/2',
+                'N06': 'NPT3/4',
+                'N10': 'NPT1',
                 '01': 'Rc1/8',
                 '02': 'Rc1/4',
                 '03': 'Rc3/8',
@@ -287,6 +293,110 @@ def data_update_afhxnt01(name, data, num_lines):
         # data['value4'] = size
         thread = thread_not_fittings.get(threads, '')
         data['value5'] = thread
+    return num_lines
+
+
+def data_update_aw20lxlc01(name, data, num_lines):
+    # value6 - резьба
+    pattern = r"AW20-(.{3})BG-2-L-XLC01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        threads = str(match.group(1))  # Резьба
+        thread = {
+            'F02': 'G1/4',
+            'N02': 'NPT1/4'
+        }.get(threads, '')
+        data['value6'] = thread
+    return num_lines
+
+
+def data_update_awsxsp01(name, data, num_lines):
+    # value5 - расход, value7 - резьба
+    pattern = r"AW(\d{3})S-(F?N?\d{2})(?:D)?(-L)?-XSP01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        sizes = str(match.group(1))  # Типоразмер
+        threads = str(match.group(2))  # Резьба
+        temp = str(match.group(3))  # Проверка исполнения L
+        size = {
+            '200': '1850',
+            '400': '2200',
+            '600': '7600'
+        }.get(sizes, '')
+        data['value5'] = size
+        thread = thread_not_fittings.get(threads, '')
+        data['value7'] = thread
+        # Поиск L
+        if temp == '-L':
+            data['value6'] = '-40 ~ +50'
+        # Условие для других резьб
+        if sizes == '400' and thread in ['G1/2', 'NPT1/2']:
+            data['value5'] = '2500'
+        if sizes == '600' and thread in ['G1', 'NPT1']:
+            data['value5'] = '8000'
+    return num_lines
+
+
+def data_update_awhxln01(name, data, num_lines):
+    # value5 - расход, value7 - резьба
+    pattern = r"AWH(\d{4})-(F?\d{2})-(.+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        sizes = str(match.group(1))  # Типоразмер
+        threads = str(match.group(2))  # Резьба
+        size = {
+            '2000': '25',
+            '4000': '35',
+            '6000': '70'
+        }.get(sizes, '')
+        data['value5'] = size
+        thread = thread_not_fittings.get(threads, '')
+        # Артикулы сформированы как будто Rc резьба, но по факту G
+        thread = thread.replace('Rc', 'G')
+        data['value7'] = thread
+    return num_lines
+
+
+def data_update_ip300(name, data, num_lines):
+    # value5 - расход, value6 - температура, value7 - резьба, value8 - материал корпуса
+    pattern = r"IP3(.)(.)(.)(.)(?:.+)"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        sizes = str(match.group(1))  # Типоразмер
+        materials = str(match.group(2))  # Материал корпуса
+        threads = str(match.group(3))  # Тип резьбы
+        temps = str(match.group(4))  # Температура
+        size = {
+            '0': '240',
+            '1': '1900'
+        }.get(sizes, '')
+        data['value5'] = size
+        type_thread = {
+            'N': 'NPT',
+            'G': 'G',
+            'P': 'Rc'
+        }.get(threads, '')
+        thread = {
+            '0': '1/4',
+            '1': '1/2'
+        }.get(sizes, '')
+        data['value7'] = type_thread + thread
+        mat = {
+            '0': 'Алюминиевый сплав',
+            '5': 'Нерж. сталь 316'
+        }.get(materials, '')
+        data['value8'] = mat
+        temp = {
+            'S': '-20 ~ +70',
+            'H': '-20 ~ +120',
+            'L': '-40 ~ +70',
+            'U': '-60 ~ +70'
+        }.get(temps, '')
+        data['value6'] = temp
     return num_lines
 
 

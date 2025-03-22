@@ -162,6 +162,10 @@ def run_main_code():
         r'K.F.\d{2}.*XRT01': 'K_F_XRT01.txt',
         r'KPR.*XJC01': 'KPR_XJC01.txt',
         r'KQ.*XLN01': 'KQ_XLN01.txt',
+        r'IP3\d{2}': 'IP300.txt',
+        r'AW20.*BG-2-L-XLC01': 'AW20_L_XLC01.txt',
+        r'AW\d{3}S.*XSP01': 'AW_S_XSP01.txt',
+        r'AWH\d{4}.*XLN01': 'AWH_XLN01.txt',
         r'AW\d{4}.*XLN01': 'AW_XLN01.txt',
         r'AF\d{4}.*XLN01': 'AF_XLN01.txt',
         r'AR\d{4}.*XLN01': 'AR_XLN01.txt',
@@ -246,6 +250,14 @@ def run_main_code():
         num_lines = data_update_vhsxln01(name, data, num_lines)
     elif config_name == 'AC_XLN01.txt':
         num_lines = data_update_acxln01(name, data, num_lines)
+    elif config_name == 'AW20_L_XLC01.txt':
+        num_lines = data_update_aw20lxlc01(name, data, num_lines)
+    elif config_name == 'AW_S_XSP01.txt':
+        num_lines = data_update_awsxsp01(name, data, num_lines)
+    elif config_name == 'AWH_XLN01.txt':
+        num_lines = data_update_awhxln01(name, data, num_lines)
+    elif config_name == 'IP300.txt':
+        num_lines = data_update_ip300(name, data, num_lines)
     elif config_name == 'AW_XRT01.txt':
         num_lines = data_update_awxrt01(name, data, num_lines)
     elif config_name == 'AF_XRT01.txt':
