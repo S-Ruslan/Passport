@@ -509,6 +509,149 @@ def data_update_arx425xnt01(name, data, num_lines):
     return num_lines
 
 
+def data_update_ap100xbr01(name, data, num_lines):
+    # value6 - резьба
+    pattern = r"AP100-(\d{2})B-XBR01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        threads = str(match.group(1))  # Резьба
+        thread = thread_not_fittings.get(threads, '')
+        data['value6'] = thread
+    return num_lines
+
+
+def data_update_ar_25xln01(name, data, num_lines):
+    # value4 - расход, value6 - резьба
+    pattern = r"AR(\d{1})25-(F?\d{2})-XLN01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        sizes = str(match.group(1))  # Типоразмер
+        threads = str(match.group(2))  # Резьба
+        size = {
+            '8': '16000',
+            '9': '18000'
+        }.get(sizes, '')
+        data['value4'] = size
+        thread = thread_not_fittings.get(threads, '')
+        data['value6'] = thread
+    return num_lines
+
+
+def data_update_arhxln01(name, data, num_lines):
+    # value4 - расход, value6 - резьба
+    pattern = r"ARH(\d{4})-(F?\d{2})-XLN01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        sizes = str(match.group(1))  # Типоразмер
+        threads = str(match.group(2))  # Резьба
+        size = {
+            '2000': '25',
+            '4000': '35',
+            '6000': '100'
+        }.get(sizes, '')
+        data['value4'] = size
+        thread = thread_not_fittings.get(threads, '')
+        # Артикулы сформированы как будто Rc резьба, но по факту G
+        thread = thread.replace('Rc', 'G')
+        data['value6'] = thread
+    return num_lines
+
+
+def data_update_arhxmp01(name, data, num_lines):
+    # value4 - расход, value6 - резьба
+    pattern = r"ARH(\d{4})-(F?\d{2})-XMP01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        sizes = str(match.group(1))  # Типоразмер
+        threads = str(match.group(2))  # Резьба
+        size = {
+            '6000': '100',
+            '8000': '-'
+        }.get(sizes, '')
+        data['value4'] = size
+        thread = thread_not_fittings.get(threads, '')
+        data['value6'] = thread
+    return num_lines
+
+
+def data_update_irxln01(name, data, num_lines):
+    # value3 - диапазон давления, value4 - расход, value6 - резьба
+    pattern = r"IR(\d{4})-(F?\d{2})-XLN01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        sizes = str(match.group(1))  # Типоразмер
+        threads = str(match.group(2))  # Резьба
+        pressure = {
+            '1000': '0.005 ~ 0.2',
+            '1010': '0.01 ~ 0.4',
+            '1020': '0.01 ~ 0.8',
+            '2000': '0.005 ~ 0.2',
+            '2010': '0.01 ~ 0.2',
+            '2020': '0.01 ~ 0.8',
+            '3000': '0.01 ~ 0.2',
+            '3010': '0.01 ~ 0.4',
+            '3020': '0.01 ~ 0.8',
+        }.get(sizes, '')
+        data['value3'] = pressure
+        size = {
+            '1000': '200',
+            '1010': '300',
+            '1020': '350',
+            '2000': '600',
+            '2010': '800',
+            '2020': '1000',
+            '3000': '3000',
+            '3010': '4000',
+            '3020': '5000',
+        }.get(sizes, '')
+        data['value4'] = size
+        thread = thread_not_fittings.get(threads, '')
+        data['value6'] = thread
+    return num_lines
+
+
+def data_update_irxrt01(name, data, num_lines):
+    # value3 - диапазон давления, value4 - расход, value6 - резьба
+    pattern = r"IR(\d{4})-(F?\d{2})-XRT01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        sizes = str(match.group(1))  # Типоразмер
+        threads = str(match.group(2))  # Резьба
+        pressure = {
+            '1000': '0.005 ~ 0.2',
+            '1010': '0.01 ~ 0.4',
+            '1020': '0.01 ~ 0.8',
+            '2000': '0.005 ~ 0.2',
+            '2010': '0.01 ~ 0.4',
+            '2020': '0.01 ~ 0.8',
+            '3000': '0.005 ~ 0.2',
+            '3010': '0.01 ~ 0.4',
+            '3020': '0.01 ~ 0.8',
+        }.get(sizes, '')
+        data['value3'] = pressure
+        size = {
+            '1000': '510',
+            '1010': '510',
+            '1020': '510',
+            '2000': '1030',
+            '2010': '1030',
+            '2020': '1030',
+            '3000': '1640',
+            '3010': '3100',
+            '3020': '3650',
+        }.get(sizes, '')
+        data['value4'] = size
+        thread = thread_not_fittings.get(threads, '')
+        data['value6'] = thread
+    return num_lines
+
+
 def data_update_alxln01(name, data, num_lines):
     # value3 - расход, value5 - резьба
     pattern = r"AL(\d{4})-(.+)-([A-Z]+)"  # Вытаскиваем куски до и после черты для определения размеров

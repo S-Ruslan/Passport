@@ -181,6 +181,12 @@ def run_main_code():
         r'AW\d{4}.*X425-XNT01': 'AW_X425_XNT01.txt',
         r'AF\d{4}.*X425-XNT01': 'AF_X425_XNT01.txt',
         r'AR\d{4}.*X425-XNT01': 'AR_X425_XNT01.txt',
+        r'AP100-\d{2}B-XBR01': 'AP100_XBR01.txt',
+        r'AR\d{1}25.*XLN01': 'AR_25_XLN01.txt',
+        r'ARH\d{4}.*XLN01': 'ARH_XLN01.txt',
+        r'ARH\d{4}.*XMP01': 'ARH_XMP01.txt',
+        r'IR\d{4}.*XLN01': 'IR_XLN01.txt',
+        r'IR\d{4}.*XRT01': 'IR_XRT01.txt',
         r'AFH\d{4}.*XLN01': 'AFH_XLN01.txt',
         r'AFH\d{4}.*XNT01': 'AFH_XNT01.txt',
         r'AFM\d{2}.*XKV01': 'AFM_XKV01.txt',
@@ -280,6 +286,18 @@ def run_main_code():
         num_lines = data_update_afx425xnt01(name, data, num_lines)
     elif config_name == 'AR_X425_XNT01.txt':
         num_lines = data_update_arx425xnt01(name, data, num_lines)
+    elif config_name == 'AP100_XBR01.txt':
+        num_lines = data_update_ap100xbr01(name, data, num_lines)
+    elif config_name == 'AR_25_XLN01.txt':
+        num_lines = data_update_ar_25xln01(name, data, num_lines)
+    elif config_name == 'ARH_XLN01.txt':
+        num_lines = data_update_arhxln01(name, data, num_lines)
+    elif config_name == 'ARH_XMP01.txt':
+        num_lines = data_update_arhxmp01(name, data, num_lines)
+    elif config_name == 'IR_XLN01.txt':
+        num_lines = data_update_irxln01(name, data, num_lines)
+    elif config_name == 'IR_XRT01.txt':
+        num_lines = data_update_irxrt01(name, data, num_lines)
     elif config_name == 'AFH_XLN01.txt':
         num_lines = data_update_afhxln01(name, data, num_lines)
     elif config_name == 'AFH_XNT01.txt':
