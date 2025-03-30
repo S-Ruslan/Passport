@@ -187,6 +187,10 @@ def run_main_code():
         r'ARH\d{4}.*XMP01': 'ARH_XMP01.txt',
         r'IR\d{4}.*XLN01': 'IR_XLN01.txt',
         r'IR\d{4}.*XRT01': 'IR_XRT01.txt',
+        r'ITV2090-.*XTP01': 'ITV2090_XTP01.txt',
+        r'ITV\d{4}-.*XKV01': 'ITV_XKV01.txt',
+        r'ITV\d{4}-.*XTP01': 'ITV_XTP01.txt',
+        r'ITVX2030-.*XTP01': 'ITVX_XTP01.txt',
         r'AFH\d{4}.*XLN01': 'AFH_XLN01.txt',
         r'AFH\d{4}.*XNT01': 'AFH_XNT01.txt',
         r'AFM\d{2}.*XKV01': 'AFM_XKV01.txt',
@@ -200,7 +204,23 @@ def run_main_code():
         r'AMF\d{3}.*XKV01': 'AMF_XKV01.txt',
         r'SY\d{2}20.*XBR01': 'SY_20_XBR01.txt',
         r'SY\d{2}20.*XRT01': 'SY_20_XRT01.txt',
-        r'SY\d{2}20.*RU01': 'SY_20_RU01.txt'
+        r'SY\d{2}20.*RU01': 'SY_20_RU01.txt',
+        r'^T\d{4}[A-Za-z]{1,2}-.*XRT01': 'T_XRT01.txt',
+        r'^TS\d{4}[A-Za-z]{1,2}-.*XLN01': 'TS_XLN01.txt',
+        r'^TS\d{4}[A-Za-z]{1,2}-.*XNV0\d{1}': 'TS_XNV01(2).txt',
+        r'^TU\d{4}[A-Za-z]{1,2}-.*XRT01': 'TU_XRT01.txt',
+        r'^TU\d{4}[A-Za-z]{1,2}-.*XLN01': 'TU_XLN01.txt',
+        r'^TI?UB?\d{2,4}[A-Za-z]{1,2}-.*XNV01': 'TU_XNV01.txt',
+        r'^TCU\d{4}[A-Za-z]{1,2}-.*XNV01': 'TCU_XNV01.txt',
+        r'^STU\d{4}[A-Za-z]{1,2}-.*XLN01': 'STU_XLN01.txt',
+        r'^TPFA\d{4}[A-Za-z]{1,2}-.*XKV01': 'TPFA_XKV01.txt',
+        r'^TI?PTFE\d{2,4}-.*XNV01': 'TPTFE_XNV01.txt',
+        r'^TRBU\d{4}[A-Za-z]{1,2}-.*XKV01': 'TRBU_XKV01.txt',
+        r'^TRBU\d{4}[A-Za-z]{1,2}-.*XNV01': 'TRBU_XNV01.txt',
+        r'^TRTU\d{4}[A-Za-z]{1,2}-.*XNV01': 'TRTU_XNV01.txt',
+        r'^TAU\d{4}[A-Za-z]{1,2}-.*XNV01': 'TAU_XNV01.txt',
+        r'^TUDL\d{4}[A-Za-z]{1,2}-.*XNV01': 'TUDL_XNV01.txt',
+
     }
 
     # Переменная для хранения имени конфигурации
@@ -298,6 +318,14 @@ def run_main_code():
         num_lines = data_update_irxln01(name, data, num_lines)
     elif config_name == 'IR_XRT01.txt':
         num_lines = data_update_irxrt01(name, data, num_lines)
+    elif config_name == 'ITV_XKV01.txt':
+        num_lines = data_update_itvxkv01(name, data, num_lines)
+    elif config_name == 'ITV_XTP01.txt':
+        num_lines = data_update_itvxtp01(name, data, num_lines)
+    elif config_name == 'ITVX_XTP01.txt':
+        num_lines = data_update_itvxxtp01(name, data, num_lines)
+    elif config_name == 'ITV2090_XTP01.txt':
+        num_lines = data_update_itv2090xtp01(name, data, num_lines)
     elif config_name == 'AFH_XLN01.txt':
         num_lines = data_update_afhxln01(name, data, num_lines)
     elif config_name == 'AFH_XNT01.txt':
@@ -354,6 +382,38 @@ def run_main_code():
         num_lines = data_update_kfxrt01(name, data, num_lines)
     elif config_name == 'H_D_XRT01.txt':
         num_lines = data_update_hdxrt01(name, data, num_lines)
+    elif config_name == 'T_XRT01.txt':
+        num_lines = data_update_txrt01(name, data, num_lines)
+    elif config_name == 'TS_XLN01.txt':
+        num_lines = data_update_tsxln01(name, data, num_lines)
+    elif config_name == 'TS_XNV01(2).txt':
+        num_lines = data_update_tsxnv012(name, data, num_lines)
+    elif config_name == 'TU_XRT01.txt':
+        num_lines = data_update_tuxrt01(name, data, num_lines)
+    elif config_name == 'TU_XLN01.txt':
+        num_lines = data_update_tuxln01(name, data, num_lines)
+    elif config_name == 'TU_XNV01.txt':
+        num_lines = data_update_tuxnv01(name, data, num_lines)
+    elif config_name == 'TPE_XNV01.txt':
+        num_lines = data_update_tpexnv01(name, data, num_lines)
+    elif config_name == 'TCU_XNV01.txt':
+        num_lines = data_update_tcuxnv01(name, data, num_lines)
+    elif config_name == 'STU_XLN01.txt':
+        num_lines = data_update_stuxln01(name, data, num_lines)
+    elif config_name == 'TPFA_XKV01.txt':
+        num_lines = data_update_tpfaxkv01(name, data, num_lines)
+    elif config_name == 'TPTFE_XNV01.txt':
+        num_lines = data_update_tptfexnv01(name, data, num_lines)
+    elif config_name == 'TRBU_XKV01.txt':
+        num_lines = data_update_trbuxkv01(name, data, num_lines)
+    elif config_name == 'TRBU_XNV01.txt':
+        num_lines = data_update_trbuxnv01(name, data, num_lines)
+    elif config_name == 'TRTU_XNV01.txt':
+        num_lines = data_update_trtuxnv01(name, data, num_lines)
+    elif config_name == 'TAU_XNV01.txt':
+        num_lines = data_update_tauxnv01(name, data, num_lines)
+    elif config_name == 'TUDL_XNV01.txt':
+        num_lines = data_update_tudlxnv01(name, data, num_lines)
 
 
 

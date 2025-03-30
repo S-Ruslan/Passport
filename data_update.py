@@ -595,7 +595,7 @@ def data_update_irxln01(name, data, num_lines):
             '2020': '0.01 ~ 0.8',
             '3000': '0.01 ~ 0.2',
             '3010': '0.01 ~ 0.4',
-            '3020': '0.01 ~ 0.8',
+            '3020': '0.01 ~ 0.8'
         }.get(sizes, '')
         data['value3'] = pressure
         size = {
@@ -607,7 +607,7 @@ def data_update_irxln01(name, data, num_lines):
             '2020': '1000',
             '3000': '3000',
             '3010': '4000',
-            '3020': '5000',
+            '3020': '5000'
         }.get(sizes, '')
         data['value4'] = size
         thread = thread_not_fittings.get(threads, '')
@@ -632,7 +632,7 @@ def data_update_irxrt01(name, data, num_lines):
             '2020': '0.01 ~ 0.8',
             '3000': '0.005 ~ 0.2',
             '3010': '0.01 ~ 0.4',
-            '3020': '0.01 ~ 0.8',
+            '3020': '0.01 ~ 0.8'
         }.get(sizes, '')
         data['value3'] = pressure
         size = {
@@ -644,11 +644,237 @@ def data_update_irxrt01(name, data, num_lines):
             '2020': '1030',
             '3000': '1640',
             '3010': '3100',
-            '3020': '3650',
+            '3020': '3650'
         }.get(sizes, '')
         data['value4'] = size
         thread = thread_not_fittings.get(threads, '')
         data['value6'] = thread
+    return num_lines
+
+
+def data_update_itvxkv01(name, data, num_lines):
+    # value2 - макс давление, value3 - вых. давление, value4 - вх. сигнал
+    # value5 - вых. сигнал, value6 - расход, value8 - резьба
+    pattern = r"ITV(\d{4})-(\d{1})(\d{1})(F?\d{1}).+"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        sizes = str(match.group(1))  # Типоразмер
+        inputes = str(match.group(2))  # Упр. сигнал
+        outputes = str(match.group(3))  # Вых. сигнал
+        threads = str(match.group(4))  # Резьба
+        # Вставка 0 между перед последним символом
+        threads = threads[:-1] + "0" + threads[-1]
+        pressure = {
+            '1010': '0.2',
+            '1030': '1',
+            '1050': '1',
+            '2010': '0.2',
+            '2030': '1',
+            '2050': '1',
+            '3010': '0.2',
+            '3030': '1',
+            '3050': '1'
+        }.get(sizes, '')
+        data['value2'] = pressure
+        pressure2 = {
+            '1010': '0.1',
+            '1030': '0.5',
+            '1050': '0.9',
+            '2010': '0.1',
+            '2030': '0.5',
+            '2050': '0.9',
+            '3010': '0.1',
+            '3030': '0.5',
+            '3050': '0.9'
+        }.get(sizes, '')
+        data['value3'] = pressure2
+        input = {
+            '0': 'Ток 4~20 мА',
+            '1': 'Ток 0~20 мА',
+            '2': 'Напряжение 0~5 VDC',
+            '3': 'Напряжение 0~10 VDC'
+        }.get(inputes, '')
+        data['value4'] = input
+        output = {
+            '1': 'Аналоговый 1~5 VDC',
+            '2': 'Релейный NPN',
+            '3': 'Релейный PNP',
+            '4': 'Аналоговый 4~20 мА'
+        }.get(outputes, '')
+        data['value5'] = output
+        size = {
+            '1010': '80',
+            '1030': '120',
+            '1050': '150',
+            '2010': '500',
+            '2030': '1150',
+            '2050': '1000',
+            '3010': '1500',
+            '3030': '3000',
+            '3050': '3500'
+        }.get(sizes, '')
+        data['value6'] = size
+        thread = thread_not_fittings.get(threads, '')
+        data['value8'] = thread
+    return num_lines
+
+
+def data_update_itvxtp01(name, data, num_lines):
+    # value2 - макс давление, value3 - вых. давление, value4 - вх. сигнал
+    # value5 - вых. сигнал, value6 - расход, value8 - резьба
+    pattern = r"ITV(\d{4})-(\d{1})(\d{1})(F?\d{1}).+"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        sizes = str(match.group(1))  # Типоразмер
+        inputes = str(match.group(2))  # Упр. сигнал
+        outputes = str(match.group(3))  # Вых. сигнал
+        threads = str(match.group(4))  # Резьба
+        # Вставка 0 между перед последним символом
+        threads = threads[:-1] + "0" + threads[-1]
+        pressure = {
+            '1010': '0.2',
+            '1030': '1',
+            '1050': '1',
+            '2010': '0.2',
+            '2030': '1',
+            '2050': '1',
+            '3010': '0.2',
+            '3030': '1',
+            '3050': '1'
+        }.get(sizes, '')
+        data['value2'] = pressure
+        pressure2 = {
+            '1010': '0.1',
+            '1030': '0.5',
+            '1050': '0.9',
+            '2010': '0.1',
+            '2030': '0.5',
+            '2050': '0.9',
+            '3010': '0.1',
+            '3030': '0.5',
+            '3050': '0.9'
+        }.get(sizes, '')
+        data['value3'] = pressure2
+        input = {
+            '0': 'Ток 4~20 мА',
+            '1': 'Ток 0~20 мА',
+            '2': 'Напряжение 0~5 VDC',
+            '3': 'Напряжение 0~10 VDC'
+        }.get(inputes, '')
+        data['value4'] = input
+        output = {
+            '1': 'Аналоговый 1~5 VDC',
+            '2': 'Релейный NPN',
+            '3': 'Релейный PNP',
+            '4': 'Аналоговый 4~20 мА'
+        }.get(outputes, '')
+        data['value5'] = output
+        size = {
+            '1010': '80',
+            '1030': '120',
+            '1050': '150',
+            '2010': '500',
+            '2030': '1150',
+            '2050': '1000',
+            '3010': '1500',
+            '3030': '3000',
+            '3050': '3500'
+        }.get(sizes, '')
+        data['value6'] = size
+        thread = thread_not_fittings.get(threads, '')
+        data['value8'] = thread
+
+    pattern = r"ITV00(\d{2})-(\d{1})[A-Za-z]{2}.+"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        sizes = str(match.group(1))  # Типоразмер
+        inputes = str(match.group(2))  # Упр. сигнал
+        pressure = {
+            '10': '0.2',
+            '30': '1',
+            '50': '1'
+        }.get(sizes, '')
+        data['value2'] = pressure
+        pressure2 = {
+            '10': '0.1',
+            '30': '0.5',
+            '50': '0.9'
+        }.get(sizes, '')
+        data['value3'] = pressure2
+        input = {
+            '0': 'Ток 4~20 мА',
+            '1': 'Ток 0~20 мА',
+            '2': 'Напряжение 0~5 VDC',
+            '3': 'Напряжение 0~10 VDC'
+        }.get(inputes, '')
+        data['value4'] = input
+        data['value5'] = 'Отсутствует'
+        data['value6'] = '6'
+        data['line8'] = 'Быстроразъемное соединение (мм)'
+        data['value8'] = '4'
+    return num_lines
+
+
+def data_update_itvxxtp01(name, data, num_lines):
+    # value4 - вх. сигнал, value5 - вых. сигнал, value8 - резьба
+    pattern = r"ITVX2030-(\d{1})(\d{1})(F?\d{1}).+"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        inputes = str(match.group(1))  # Упр. сигнал
+        outputes = str(match.group(2))  # Вых. сигнал
+        threads = str(match.group(3))  # Резьба
+        # Вставка 0 между перед последним символом
+        threads = threads[:-1] + "0" + threads[-1]
+        input = {
+            '0': 'Ток 4~20 мА',
+            '1': 'Ток 0~20 мА',
+            '2': 'Напряжение 0~5 VDC',
+            '3': 'Напряжение 0~10 VDC'
+        }.get(inputes, '')
+        data['value4'] = input
+        output = {
+            '1': 'Аналоговый 1~5 VDC',
+            '2': 'Релейный NPN',
+            '3': 'Релейный PNP',
+            '4': 'Аналоговый 4~20 мА'
+        }.get(outputes, '')
+        data['value5'] = output
+        thread = thread_not_fittings.get(threads, '')
+        data['value8'] = thread
+    return num_lines
+
+
+def data_update_itv2090xtp01(name, data, num_lines):
+    # value4 - вх. сигнал, value5 - вых. сигнал, value7 - резьба
+    pattern = r"ITV2090-(\d{1})(\d{1})(F?\d{1}).+"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        inputes = str(match.group(1))  # Упр. сигнал
+        outputes = str(match.group(2))  # Вых. сигнал
+        threads = str(match.group(3))  # Резьба
+        # Вставка 0 между перед последним символом
+        threads = threads[:-1] + "0" + threads[-1]
+        input = {
+            '0': 'Ток 4~20 мА',
+            '1': 'Ток 0~20 мА',
+            '2': 'Напряжение 0~5 VDC',
+            '3': 'Напряжение 0~10 VDC'
+        }.get(inputes, '')
+        data['value4'] = input
+        output = {
+            '1': 'Аналоговый 1~5 VDC',
+            '2': 'Релейный NPN',
+            '3': 'Релейный PNP',
+            '4': 'Аналоговый 4~20 мА'
+        }.get(outputes, '')
+        data['value5'] = output
+        thread = thread_not_fittings.get(threads, '')
+        data['value7'] = thread
     return num_lines
 
 
@@ -1656,4 +1882,522 @@ def data_update_hdxrt01(name, data, num_lines):
             num_lines += 1
             thread = thread_fittings.get(second_group, '')
             data['value5'] = thread
+    return num_lines
+
+
+def data_update_txrt01(name, data, num_lines):
+    # value2 - давление, value3 - внеш диам, value4 - внут диам, value6 - рад изгиба
+    pattern = r"^T(\d{2})(\d{2}).+-XRT01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        out_diam = str(match.group(1))  # Внешний диаметр
+        inner_diam = str(match.group(2))  # Внутренний диаметр
+        data['value3'] = str(out_diam).lstrip("0")
+        data['value4'] = str(inner_diam).lstrip("0")
+        if data['value4'] == '25':
+            data['value4'] = '2.5'
+        elif data['value4'] == '75':
+            data['value4'] = '7.5'
+        pressure = {
+            '04': '3.3',
+            '06': '3',
+            '08': '2',
+            '10': '2',
+            '12': '2',
+            '16': '1.6'
+        }.get(out_diam, '')
+        data['value2'] = pressure
+        radius = {
+            '04': '25',
+            '06': '45',
+            '08': '60',
+            '10': '75',
+            '12': '100',
+            '16': '200'
+        }.get(out_diam, '')
+        data['value6'] = radius
+    return num_lines
+
+
+def data_update_tsxln01(name, data, num_lines):
+    # value3 - внеш диам, value4 - внут диам, value6 - рад изгиба
+    pattern = r"^TS(\d{2})(\d{2}).+-XLN01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        out_diam = str(match.group(1))  # Внешний диаметр
+        inner_diam = str(match.group(2))  # Внутренний диаметр
+        data['value3'] = str(out_diam).lstrip("0")
+        data['value4'] = str(inner_diam).lstrip("0")
+        if data['value4'] == '25':
+            data['value4'] = '2.5'
+        elif data['value4'] == '75':
+            data['value4'] = '7.5'
+        radius = {
+            '04': '25',
+            '06': '45',
+            '08': '60',
+            '10': '75',
+            '12': '100'
+        }.get(out_diam, '')
+        data['value6'] = radius
+    return num_lines
+
+
+def data_update_tsxnv012(name, data, num_lines):
+    # value2 - давление, value3 - внеш диам, value4 - внут диам, value5 - температура, value6 - рад изгиба
+    pattern = r"^TS(\d{2})(\d{2}).+-XNV(\d{2})"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        out_diam = str(match.group(1))  # Внешний диаметр
+        inner_diam = str(match.group(2))  # Внутренний диаметр
+        end = str(match.group(3))  # Концовка, отвечает за материал
+        data['value3'] = str(out_diam).lstrip("0")
+        data['value4'] = str(inner_diam).lstrip("0")
+        if data['value4'] == '25':
+            data['value4'] = '2.5'
+        elif data['value4'] == '75':
+            data['value4'] = '7.5'
+
+        if end == '01':
+            data['value5'] = '-40 ~ +125'
+            data['value2'] = '2'
+        elif end == '02':
+            data['value5'] = '-40 ~ +100'
+            if out_diam == '10' and inner_diam == '08':
+                data['value2'] = '1.5'
+            elif out_diam == '12' and inner_diam == '10':
+                data['value2'] = '1.5'
+            elif out_diam == '16' and inner_diam == '12':
+                data['value2'] = '1.5'
+            else:
+                data['value2'] = '2'
+        all_diam = out_diam + inner_diam
+        if end == '01':
+            radius = {
+                '0425': '25',
+                '0604': '45',
+                '0806': '60',
+                '1008': '90',
+                '1075': '75',
+                '1209': '100',
+                '1210': '140',
+                '1411': '130',
+                '1612': '180'
+            }.get(all_diam, '')
+        elif end == '02':
+            radius = {
+                '0425': '15',
+                '0604': '20',
+                '0806': '30',
+                '1008': '45',
+                '1075': '40',
+                '1209': '50',
+                '1210': '55',
+                '1612': '105'
+            }.get(all_diam, '')
+        data['value6'] = radius
+    return num_lines
+
+
+def data_update_tuxrt01(name, data, num_lines):
+    # value3 - внеш диам, value4 - внут диам, value6 - рад изгиба
+    pattern = r"^TU(\d{2})(\d{2}).+-XRT01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        out_diam = str(match.group(1))  # Внешний диаметр
+        inner_diam = str(match.group(2))  # Внутренний диаметр
+        data['value3'] = str(out_diam).lstrip("0")
+        data['value4'] = str(inner_diam).lstrip("0")
+        if data['value4'] == '25':
+            data['value4'] = '2.5'
+        elif data['value4'] == '65':
+            data['value4'] = '6.5'
+        radius = {
+            '04': '10',
+            '06': '15',
+            '08': '20',
+            '10': '25',
+            '12': '37',
+            '16': '60'
+        }.get(out_diam, '')
+        data['value6'] = radius
+    return num_lines
+
+
+def data_update_tuxln01(name, data, num_lines):
+    # value2 - давление, value3 - внеш диам, value4 - внут диам, value6 - рад изгиба
+    pattern = r"^TU(\d{2})(\d{2}).+-XLN01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        out_diam = str(match.group(1))  # Внешний диаметр
+        inner_diam = str(match.group(2))  # Внутренний диаметр
+        data['value3'] = str(out_diam).lstrip("0")
+        data['value4'] = str(inner_diam).lstrip("0")
+        if data['value4'] == '25':
+            data['value4'] = '2.5'
+        elif data['value4'] == '65':
+            data['value4'] = '6.5'
+        radius = {
+            '04': '10',
+            '06': '15',
+            '08': '20',
+            '10': '30',
+            '12': '35',
+            '16': '65'
+        }.get(out_diam, '')
+        data['value6'] = radius
+    return num_lines
+
+
+def data_update_tuxnv01(name, data, num_lines):
+    # value2 - давление, value3 - внеш диам, value4 - внут диам, value6 - рад изгиба
+    pattern = r"^TU(\d{2})(\d{2}).+-XNV01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        out_diam = str(match.group(1))  # Внешний диаметр
+        inner_diam = str(match.group(2))  # Внутренний диаметр
+        data['value3'] = str(out_diam).lstrip("0")
+        data['value4'] = str(inner_diam).lstrip("0")
+        if data['value4'] == '25':
+            data['value4'] = '2.5'
+        elif data['value4'] == '65':
+            data['value4'] = '6.5'
+        elif data['value4'] == '12':
+            data['value4'] = '1.2'
+        all_diam = out_diam + inner_diam
+        if all_diam == '0806':
+            data['value2'] = '0.7'
+        elif all_diam == '1008':
+            data['value2'] = '0.6'
+        elif all_diam in ['1209', '1410', '1612']:
+            data['value2'] = '0.8'
+        radius = {
+            '0212': '8',
+            '0302': '10',
+            '0425': '10',
+            '0604': '15',
+            '0805': '20',
+            '0806': '30',
+            '1065': '30',
+            '1008': '38',
+            '1208': '35',
+            '1209': '40',
+            '1410': '55',
+            '1612': '65'
+        }.get(all_diam, '')
+        data['value6'] = radius
+    pattern = r"^TIUB(\d{2}).+-XNV01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        data['line3'] = 'Внешний диаметр, дюймы (мм)'
+        diam = str(match.group(1))  # Диаметр
+        out_diam = {
+            '07': '1/4" (6.35 мм)',
+            '11': '3/8" (9.52 мм)',
+            '13': '1/2" (12.7 мм)'
+        }.get(diam, '')
+        data['value3'] = out_diam
+        inner_diam = {
+            '07': '4.23',
+            '11': '6.35',
+            '13': '8.46'
+        }.get(diam, '')
+        data['value4'] = inner_diam
+        radius = {
+            '07': '15',
+            '11': '30',
+            '13': '35'
+        }.get(diam, '')
+        data['value6'] = radius
+    return num_lines
+
+
+def data_update_tpexnv01(name, data, num_lines):
+    # value3 - внеш диам, value4 - внут диам, value6 - рад изгиба
+    pattern = r"^TPE(\d{2})(\d{2}).+-XNV01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        out_diam = str(match.group(1))  # Внешний диаметр
+        inner_diam = str(match.group(2))  # Внутренний диаметр
+        data['value3'] = str(out_diam).lstrip("0")
+        data['value4'] = str(inner_diam).lstrip("0")
+        if data['value4'] == '25':
+            data['value4'] = '2.5'
+        elif data['value4'] == '75':
+            data['value4'] = '7.5'
+        radius = {
+            '04': '10',
+            '06': '15',
+            '08': '20',
+            '10': '30',
+            '12': '35'
+        }.get(out_diam, '')
+        data['value6'] = radius
+    return num_lines
+
+
+def data_update_tcuxnv01(name, data, num_lines):
+    #1 артикул, функция обработчик не нужна, но оставил чтобы логику программы не нарушать
+    return num_lines
+
+
+def data_update_stuxln01(name, data, num_lines):
+    # value3 - внеш диам, value4 - внут диам, value6 - вся длина, value7 - раб длина
+    pattern = r"^STU(\d{2})(\d{2})[A-Za-z]{1,2}-(\d{1,2})-XLN01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        out_diam = str(match.group(1))  # Внешний диаметр
+        inner_diam = str(match.group(2))  # Внутренний диаметр
+        lenght = str(match.group(3))  # Полная длина
+        data['value3'] = str(out_diam).lstrip("0")
+        data['value4'] = str(inner_diam).lstrip("0")
+        if data['value4'] == '25':
+            data['value4'] = '2.5'
+        elif data['value4'] == '65':
+            data['value4'] = '6.5'
+        data['value6'] = lenght
+        work_lenght = {
+            '2': '1',
+            '3': '1.5',
+            '5': '2.5',
+            '7': '3.5',
+            '10': '5',
+            '14': '7',
+            '20': '10'
+        }.get(lenght, '')
+        data['value7'] = work_lenght
+    return num_lines
+
+
+def data_update_tpfaxkv01(name, data, num_lines):
+    # value2 - давление, value3 - внеш диам, value4 - внут диам, value6 - рад изгиба
+    pattern = r"^TPFA(\d{2})(\d{2}).+-XKV01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        out_diam = str(match.group(1))  # Внешний диаметр
+        inner_diam = str(match.group(2))  # Внутренний диаметр
+        data['value3'] = str(out_diam).lstrip("0")
+        data['value4'] = str(inner_diam).lstrip("0")
+        pressure = {
+            '04': '1.7',
+            '06': '1.5',
+            '08': '1',
+            '10': '0.7',
+            '12': '0.6'
+        }.get(out_diam, '')
+        data['value2'] = pressure
+        radius = {
+            '04': '20',
+            '06': '35',
+            '08': '60',
+            '10': '100',
+            '12': '130'
+        }.get(out_diam, '')
+        data['value6'] = radius
+    return num_lines
+
+
+def data_update_tptfexnv01(name, data, num_lines):
+    # value2 - давление, value3 - внеш диам, value4 - внут диам, value6 - рад изгиба
+    pattern = r"^TPTFE(\d{2})(\d{2}).+-XNV01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        out_diam = str(match.group(1))  # Внешний диаметр
+        inner_diam = str(match.group(2))  # Внутренний диаметр
+        data['value3'] = str(out_diam).lstrip("0")
+        data['value4'] = str(inner_diam).lstrip("0")
+        if data['value4'] == '25':
+            data['value4'] = '2.5'
+        all_diam = out_diam + inner_diam
+        pressure = {
+            '0402': '2.5',
+            '0425': '1.6',
+            '0403': '0.9',
+            '0604': '1.3',
+            '0806': '0.85',
+            '1008': '0.65',
+            '1209': '0.75',
+            '1210': '0.5',
+            '1613': '0.55',
+            '1916': '0.45',
+            '2522': '0.35'
+        }.get(all_diam, '')
+        data['value2'] = pressure
+        radius = {
+            '0402': '15',
+            '0425': '25',
+            '0403': '35',
+            '0604': '35',
+            '0806': '65',
+            '1008': '100',
+            '1209': '105',
+            '1210': '150',
+            '1613': '190',
+            '1916': '265',
+            '2522': '430'
+        }.get(all_diam, '')
+        data['value6'] = radius
+    pattern = r"^TIPTFE(\d{2}).+-XNV01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        diam = str(match.group(1))  # Диаметр
+        pressure = {
+            '01': '2.4',
+            '07': '1.5',
+            '11': '1.15',
+            '13': '0.8',
+            '19': '0.45',
+            '25': '0.4'
+        }.get(diam, '')
+        data['value2'] = pressure
+        data['line3'] = 'Внешний диаметр, дюймы'
+        out_diam = {
+            '01': '1/8"',
+            '07': '1/4"',
+            '11': '3/8"',
+            '13': '1/2"',
+            '19': '3/4"',
+            '25': '1"'
+        }.get(diam, '')
+        data['value3'] = out_diam
+        data['line4'] = 'Толщина стенки, дюймы'
+        thin = {
+            '01': '0.03"',
+            '07': '0.047"',
+            '11': '0.062"',
+            '13': '0.062"',
+            '19': '0.062"',
+            '25': '0.062"'
+        }.get(diam, '')
+        data['value4'] = thin
+        radius = {
+            '01': '15',
+            '07': '35',
+            '11': '60',
+            '13': '115',
+            '19': '250',
+            '25': '430'
+        }.get(diam, '')
+        data['value6'] = radius
+    return num_lines
+
+
+def data_update_trbuxkv01(name, data, num_lines):
+    #  value3 - внеш диам, value4 - внут диам, value6 - рад изгиба
+    pattern = r"^TRBU(\d{2})(\d{2}).+-XKV01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        out_diam = str(match.group(1))  # Внешний диаметр
+        inner_diam = str(match.group(2))  # Внутренний диаметр
+        data['value3'] = str(out_diam).lstrip("0")
+        data['value4'] = str(inner_diam).lstrip("0")
+        if data['value4'] == '65':
+            data['value4'] = '6.5'
+        radius = {
+            '06': '15',
+            '08': '20',
+            '10': '30',
+            '12': '45'
+        }.get(out_diam, '')
+        data['value6'] = radius
+    return num_lines
+
+
+def data_update_trbuxnv01(name, data, num_lines):
+    #  value3 - внеш диам, value4 - внут диам, value6 - рад изгиба
+    pattern = r"^TRBU(\d{2})(\d{2}).+-XNV01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        out_diam = str(match.group(1))  # Внешний диаметр
+        inner_diam = str(match.group(2))  # Внутренний диаметр
+        data['value3'] = str(out_diam).lstrip("0")
+        data['value4'] = str(inner_diam).lstrip("0")
+        if data['value4'] == '65':
+            data['value4'] = '6.5'
+        elif data['value4'] == '25':
+            data['value4'] = '2.5'
+        radius = {
+            '04': '10',
+            '06': '15',
+            '08': '20',
+            '10': '30',
+            '12': '45',
+            '16': '60'
+        }.get(out_diam, '')
+        data['value6'] = radius
+    return num_lines
+
+
+def data_update_trtuxnv01(name, data, num_lines):
+    #  value3 - внеш диам, value4 - внут диам, value6 - рад изгиба
+    pattern = r"^TRTU(\d{2})(\d{2}).+-XNV01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        out_diam = str(match.group(1))  # Внешний диаметр
+        inner_diam = str(match.group(2))  # Внутренний диаметр
+        data['value3'] = str(out_diam).lstrip("0")
+        data['value4'] = str(inner_diam).lstrip("0")
+        if data['value4'] == '65':
+            data['value4'] = '6.5'
+        radius = {
+            '06': '15',
+            '08': '20',
+            '10': '30',
+            '12': '45',
+            '14': '75'
+        }.get(out_diam, '')
+        data['value6'] = radius
+    return num_lines
+
+
+def data_update_tauxnv01(name, data, num_lines):
+    #  value3 - внеш диам, value4 - внут диам, value6 - рад изгиба
+    pattern = r"^TAU(\d{2})(\d{2}).+-XNV01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        out_diam = str(match.group(1))  # Внешний диаметр
+        inner_diam = str(match.group(2))  # Внутренний диаметр
+        data['value3'] = str(out_diam).lstrip("0")
+        data['value4'] = str(inner_diam).lstrip("0")
+        if data['value4'] == '65':
+            data['value4'] = '6.5'
+        elif data['value4'] == '25':
+            data['value4'] = '2.5'
+        radius = {
+            '04': '10',
+            '06': '15',
+            '08': '25',
+            '10': '35',
+            '12': '45'
+        }.get(out_diam, '')
+        data['value6'] = radius
+    return num_lines
+
+
+def data_update_tudlxnv01(name, data, num_lines):
+    #  value3 - внеш диам, value4 - внут диам
+    pattern = r"^TUDL(\d{2})(\d{2}).+-XNV01"  # Вытаскиваем куски до и после черты для определения размеров
+    match = re.search(pattern, name)
+    if match:
+        # Извлекаем группы
+        out_diam = str(match.group(1))  # Внешний диаметр
+        inner_diam = str(match.group(2))  # Внутренний диаметр
+        data['value3'] = str(out_diam).lstrip("0")
+        data['value4'] = str(inner_diam).lstrip("0")
+        if data['value4'] == '65':
+            data['value4'] = '6.5'
     return num_lines
